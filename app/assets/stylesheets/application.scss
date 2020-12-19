@@ -19,6 +19,10 @@
   padding: 0;
 }
 
+html,　body {
+  height: 100%;
+}
+
 header {
   display: flex;
   width: 100%;
@@ -57,4 +61,14 @@ a {
 main {
   padding: 60px 100px 0 100px;
   background-color: #99cc00;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #cab64a;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
 }
