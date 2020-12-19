@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'home#top'
   get 'home/about' => 'home#about'
 
   get 'post_items/complete' => 'post_items#complete'
 
-  devise_for :users
   get 'users/unsubscribe' => 'users#unsubscribe'
   get 'users/thanks' => 'users#thanks'
   patch 'users/withdraw' => 'users#withdraw'
