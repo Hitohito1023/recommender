@@ -30,6 +30,7 @@ class UsersController < ApplicationController
 
   def withdraw
     @user = User.find(current_user.id)
+    @user.post_items.delete_all
     @user.update(is_valid: false)
     reset_session
     redirect_to root_path
