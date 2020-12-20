@@ -1,4 +1,7 @@
 class PostItem < ApplicationRecord
 
-  belogs_to :genre
+  belongs_to :user
+
+  attachment :image
+  belongs_to :genre
 end

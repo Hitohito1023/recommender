@@ -1,2 +1,32 @@
-<h1>PostItems#edit</h1>
-<p>Find me in app/views/post_items/edit.html.erb</p>
+	<h1>Editing Items</h1>
+
+	<%= form_with model:@post_item, local:true do |f| %>
+
+  <div>
+		<%= f.label :image, "画像" %>
+		<%= attachment_image_tag @post_item, :image, size:'300x300', fallback: "no_image.jpg" %>
+		<%= f.attachment_field :image %>
+	</div>
+
+  <div class="field row">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field row">
+    <%= f.label :introduction %>
+    <%= f.text_area :introduction %>
+  </div>
+
+  <div class="field row">
+    <%= f.label :genre_id, "ジャンル" %></td>
+  	<%= f.collection_select :genre_id, Genre.all, :id, :name %>
+	</div>
+
+  <div class="actions row">
+    <%= f.submit %>
+  </div>
+  <% end %>
+
+		<%= link_to "戻る", post_item_path(@post_item) %>
+

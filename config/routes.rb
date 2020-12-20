@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'home#top'
   get 'home/about' => 'home#about'
 
-  get 'post_items/complete' => 'post_items#complete'
+  get 'post_items/complete' => 'post_items#complete', as: 'post_items_complete'
 
   resources :users, only: [:index, :show, :edit, :update]
   get 'users/:id/unsubscribe' => 'users#unsubscribe', as: 'users_unsubscribe'

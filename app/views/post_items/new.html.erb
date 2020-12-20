@@ -1,2 +1,28 @@
 <h1>PostItems#new</h1>
-<p>Find me in app/views/post_items/new.html.erb</p>
+<%= form_with model:@post_item, local:true do |f| %>
+
+  <div>
+		<%= f.label :image, "画像" %>
+		<%= f.attachment_field :image %>
+	</div>
+
+  <div class="field row">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field row">
+    <%= f.label :introduction %>
+    <%= f.text_area :introduction %>
+  </div>
+
+  <div class="field row">
+    <%= f.label :genre_id, "ジャンル" %></td>
+  	<%= f.collection_select :genre_id, Genre.all, :id, :name %>
+	</div>
+
+  <div class="actions row">
+    <%= f.submit %>
+  </div>
+<% end %>
+
