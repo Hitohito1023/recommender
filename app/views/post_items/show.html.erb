@@ -8,6 +8,8 @@
 						<%#= @book.user.name %>
 						<%# end %>
 					</td>
+					<td><%= attachment_image_tag @post_item, :image, size:'500x500', fallback: "no_image.jpg" %></td>
+
 					<td><%= @post_item.name %></td>
 					<td><%= @post_item.introduction %></td>
 					<td><%= @post_item.genre.name %></td>
