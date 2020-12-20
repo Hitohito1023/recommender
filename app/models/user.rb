@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :post_items, dependent: :destroy
+
   attachment :profile_image
 
   scope :only_valid, -> { where(is_valid: true) }
