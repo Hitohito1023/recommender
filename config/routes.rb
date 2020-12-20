@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :post_items
 
-  resources :genres, only: [:create, :detroy]
+  resources :genres, only: [:index, :new, :create, :detroy]
 end
 
 
