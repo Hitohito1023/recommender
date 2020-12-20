@@ -1,4 +1,7 @@
 <h2>PostItems index</h2>
+<% if user_signed_in? %>
+	<%= link_to "新規投稿する", new_post_item_path %>
+<% end %>
 	<table>
 		<thead>
 			<tr>
@@ -17,7 +20,7 @@
 						<%#= attachment_image_tag(book.user, :profile_image, :fill, 50, 50, fallback: "no-image-mini.jpg") %>
 					<%# end %>
 				</td>
-				<td><%= link_to post_item.name, post_item_path(post_item), class: "book_#{book.id}" %></td>
+				<td><%= link_to post_item.name, post_item_path(post_item) %></td>
 				<td></td>
 			</tr>
 			<% end %>
