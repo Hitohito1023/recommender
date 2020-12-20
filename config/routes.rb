@@ -5,13 +5,15 @@ Rails.application.routes.draw do
 
   get 'post_items/complete' => 'post_items#complete'
 
-  get 'users/unsubscribe' => 'users#unsubscribe'
-  get 'users/thanks' => 'users#thanks'
-  patch 'users/withdraw' => 'users#withdraw'
-  put 'users/withdraw' => 'users#withdraw'
   resources :users, only: [:index, :show, :edit, :update]
+  get 'users/:id/unsubscribe' => 'users#unsubscribe', as: 'users_unsubscribe'
+  get 'users/thanks' => 'users#thanks', as: 'users_thanks'
+  patch 'users/:id/withdraw' => 'users#withdraw', as: 'users_withdraw'
+
 
   resources :post_items
 
-  resources :genres, only: [:create, :detroy]
+  resources :genres, only: [:index, :new, :create, :detroy]
 end
+
+
