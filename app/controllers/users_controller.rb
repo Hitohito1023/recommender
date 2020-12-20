@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
-  before_action :ensure_correct_user, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:edit, :update, :unsubscribe, :withdraw]
+  before_action :ensure_correct_user, only: [:edit, :update, :unsubscribe, :withdraw]
 
   def index
-    @users = User.all
+    @users = User.only_valid
   end
 
   def show
@@ -25,9 +25,14 @@ class UsersController < ApplicationController
 
 
   def unsubscribe
+    @user = current_user
   end
 
   def withdraw
+    @user = User.find(current_user.id)
+    @user.update(is_valid: false)
+    reset_session
+    redirect_to root_path
   end
 
   def thanks
@@ -36,7 +41,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :profile_image_id, :introduction)
+    params.require(:user).permit(:name, :email, :profile_image, :introduction)
   end
 
   def ensure_correct_user

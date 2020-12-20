@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   attachment :profile_image
 
+  scope :only_valid, -> { where(is_valid: true) }
+
 end
