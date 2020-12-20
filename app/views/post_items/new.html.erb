@@ -1,6 +1,7 @@
 <h1>PostItems#new</h1>
 <%= form_with model:@post_item, local:true do |f| %>
 
+<form>
   <div>
 		<%= f.label :image, "画像" %>
 		<%= f.attachment_field :image %>
@@ -24,5 +25,6 @@
   <div class="actions row">
     <%= f.submit %>
   </div>
+</form>
 <% end %>
 

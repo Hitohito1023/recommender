@@ -2,7 +2,15 @@ class PostItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :complete]
 
   def index
-    @post_items = PostItem.all
+    @genres = Genre.all
+    if params[:genre_id]
+      @genre = @genres.find(params[:genre_id])
+      all_post_items = @genre.post_items
+    else
+      all_post_items = PostItem.all
+    end
+    @post_items = all_post_items
+    @all_post_items_count = all_post_items.count
   end
 
   def show
