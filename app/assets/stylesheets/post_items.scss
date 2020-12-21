@@ -25,7 +25,7 @@
   padding: 10px 0 0;
   text-align: center;
   border: 4px double #fee;
-  margin: 35px 50px 0 0;
+  margin: 35px 20px 0 0;
 
   a {
     display: block;
@@ -52,7 +52,6 @@
   padding: 40px 40px 40px 100px;
   .post-item-recommend {
     margin-left: 50px;
-  }
     a {
       margin-right: 30px;
     }
@@ -68,6 +67,7 @@
       border        : 2px solid #000066;    /* 枠の指定 */
       width: 100px;
     }
+  }
 }
 
 .post-item-edit {
