@@ -1,4 +1,4 @@
-<h2>Item detail</h2>
+<h1>Item detail</h1>
 
 		<div class="post-item-show">
 			<%= attachment_image_tag @post_item, :image, size:'400x500', fallback: "no_image.jpg" %>
@@ -12,8 +12,8 @@
 				<h2>Recommender</h2>
 				<p><%= link_to @post_item.user.name, user_path(@post_item.user) %></p></br>
 				<% if @post_item.user == current_user %>
-					<%= link_to "Edit", edit_post_item_path(@post_item) %>
-					<%= link_to "Destroy", post_item_path(@post_item), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"} %>
+					<button><%= link_to "Edit", edit_post_item_path(@post_item) %></button>
+					<button><%= link_to "Destroy", post_item_path(@post_item), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"} %></button>
 				<% end %>
 			</div>
 		</div>
