@@ -1,32 +1,28 @@
-	<h1>Editing Items</h1>
+<h1>Editing Items</h1>
 
-	<%= form_with model:@post_item, local:true do |f| %>
+<%= form_with model:@post_item, local:true do |f| %>
+  <div class="post-item-edit">
+  	<div class="post-item-edit-image">
+    	<h2><%= f.label :image, "Image" %></h2>
+    	<%= attachment_image_tag @post_item, :image, size:'400x500', fallback: "no_image.jpg" %></br>
+    	<%= f.attachment_field :image %>
+    </div>
+    <div class="post-item-edit-form">
+      <h2><%= f.label :name %></h2>
+      <%= f.text_field :name %>
 
-  <div>
-		<%= f.label :image, "画像" %>
-		<%= attachment_image_tag @post_item, :image, size:'300x300', fallback: "no_image.jpg" %>
-		<%= f.attachment_field :image %>
-	</div>
+      <h2><%= f.label :introduction %></h2>
+      <%= f.text_area :introduction, size: "50x15" %>
 
-  <div class="field row">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+      <h2><%= f.label :genre_id, "Category" %></h2>
+      <%= f.collection_select :genre_id, Genre.all, :id, :name %>
+
+      <div class="save-btn"><%= f.submit "save", class:"btn" %></div>
+    </div>
   </div>
+<% end %>
 
-  <div class="field row">
-    <%= f.label :introduction %>
-    <%= f.text_area :introduction %>
+<div align="right">
+  <%= link_to "保存せずに戻る", post_item_path(@post_item) %>
   </div>
-
-  <div class="field row">
-    <%= f.label :genre_id, "ジャンル" %></td>
-  	<%= f.collection_select :genre_id, Genre.all, :id, :name %>
-	</div>
-
-  <div class="actions row">
-    <%= f.submit %>
-  </div>
-  <% end %>
-
-		<%= link_to "戻る", post_item_path(@post_item) %>
 

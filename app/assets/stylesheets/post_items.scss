@@ -1,3 +1,147 @@
 // Place all the styles related to the PostItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-btn {
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 15px;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 5px 5px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  border        : 2px solid #000066;    /* 枠の指定 */
+  width: 100px;
+  margin: 0 0 0 auto;
+  a {
+    color: #FFFFFF;
+  }
+}
+
+
+.genre-sidebar {
+  width: 160px;
+  height: max-content;
+  padding: 10px 0 0;
+  text-align: center;
+  border: 4px double #fee;
+  margin: 35px 20px 0 0;
+
+  a {
+    display: block;
+  }
+
+}
+
+.post-item-index {
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.post-item {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    margin: 20px 30px 0 0;
+    text-align: center;
+  }
+}
+
+.post-item-show {
+  display: flex;
+  padding: 40px 40px 40px 100px;
+  .post-item-recommend {
+    margin-left: 50px;
+    a {
+      margin-right: 30px;
+    }
+    .btn {
+      display       : inline-block;
+      border-radius : 5%;          /* 角丸       */
+      font-size     : 15px;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 5px 5px;   /* 余白       */
+      background    : #000066;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      border        : 2px solid #000066;    /* 枠の指定 */
+      width: 100px;
+    }
+  }
+}
+
+.post-item-edit {
+  display: flex;
+  padding: 40px 40px 40px 100px;
+  .post-item-edit-form {
+    margin-left: 60px;
+    #post_item_name, textarea, select {
+      float: left;
+      width: 100%;
+      max-width: 100%;
+      border: none;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      background: darken(#f9f9f9, 10%);
+      color: darken(#f9f9f9, 50%);
+    }
+    select {
+      width: 200px;
+    }
+    .save-btn {
+      margin: 80px 0;
+    }
+    .btn {
+      display       : inline-block;
+      border-radius : 5%;          /* 角丸       */
+      font-size     : 15px;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 5px 5px;   /* 余白       */
+      background    : #000066;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      border        : 2px solid #000066;    /* 枠の指定 */
+      width: 100px;
+    }
+  }
+}
+
+.post-item-new {
+  display: flex;
+  padding: 40px 40px 40px 100px;
+  .post-item-new-form {
+    margin-left: 60px;
+    #post_item_name, textarea, select {
+      float: left;
+      width: 100%;
+      max-width: 100%;
+      border: none;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      background: darken(#f9f9f9, 10%);
+      color: darken(#f9f9f9, 50%);
+    }
+    select {
+      width: 200px;
+    }
+    .post-btn {
+      margin: 80px 0;
+    }
+    .btn {
+      display       : inline-block;
+      border-radius : 5%;          /* 角丸       */
+      font-size     : 15px;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 5px 5px;   /* 余白       */
+      background    : #000066;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      border        : 2px solid #000066;    /* 枠の指定 */
+      width: 100px;
+
+    }
+  }
+}
+

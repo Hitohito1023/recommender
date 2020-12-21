@@ -1,8 +1,7 @@
-<h2>User edit</h2>
+<h1>User edit</h1>
 
 <%= form_with model:@user, local: true do |f| %>
 
-	<!-- エラーメッセージ表示-->
 	<% if @user.errors.any? %>
 		<div id="error_explanation">
 			<h3><%= @user.errors.count %>error prohibited this obj from being saved:</h3>
@@ -13,37 +12,32 @@
 			</ul>
 		</div>
 	<% end %>
-	<!-- エラーメッセージ表示-->
-
-	<div class="field">
-		<%= f.label :name %>
-		<%= f.text_field :name, :placeholder =>"#{@user.name}" %>
-	</div>
-
-	<div class="field">
-		<%= f.label :email %>
-		<%= f.email_field :email, :placeholder =>"#{@user.email}"%>
-	</div>
-
-
-	<div class="field">
-		<%= f.label :profile_image %>
+<div class="user-edit">
+	<div class="user-edit-image">
+		<h2><%= f.label :profile_image %></h2>
+		<%= attachment_image_tag @user, :profile_image, size:'300x300', fallback: "no_image_icon.jpg" %></br>
 		<%= f.attachment_field :profile_image, :placeholder =>"#{@user.profile_image}" %>
 	</div>
+	<div class="user-edit-form">
+		<h2><%= f.label :name %></h2>
+		<%= f.text_field :name, :placeholder =>"#{@user.name}" %>
 
-	<div class="field">
-		<%= f.label :introduction %>
-		<%= f.text_area :introduction, :placeholder =>"#{@user.introduction}"%>
+		<h2><%= f.label :email %></h2>
+		<%= f.email_field :email, :placeholder =>"#{@user.email}"%>
+
+		<h2><%= f.label :introduction %></h2>
+		<%= f.text_area :introduction, size: "50x10", :placeholder =>"#{@user.introduction}"%>
+
+		<div align="right"><%= f.submit "save", class:"btn" %></div>
+
 	</div>
+</div>
 
+<div align="right">
+	<%= link_to "退会はこちら=>", users_unsubscribe_path %>
+</div>
 
-
-	<div class="actions">
-		<%= f.submit %>
-	</div>
-
-	<div>
-		<%= link_to "退会する", users_unsubscribe_path, class: "btn btn-danger" %>
-	</div>
 
 <% end %>
+
+
