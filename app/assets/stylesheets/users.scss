@@ -1,3 +1,76 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.users-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.users-index-content {
+  margin: 20px;
+  img {
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.5);
+  }
+  h3 {
+    text-align: center;
+  }
+}
+
+.user-show {
+  display: flex;
+  padding: 40px 40px 40px 100px;
+  img {
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.5);
+  }
+  .user-show-content {
+    margin-left: 60px;
+  }
+    .btn {
+      display       : inline-block;
+      border-radius : 5%;          /* 角丸       */
+      font-size     : 15px;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 5px 5px;   /* 余白       */
+      background    : #000066;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      border        : 2px solid #000066;    /* 枠の指定 */
+      width: 100px;
+    }
+}
+
+.user-edit {
+  display: flex;
+  padding: 40px 40px 40px 100px;
+  .user-edit-form {
+    margin-left: 60px;
+    #user_name, #user_email, textarea {
+      float: left;
+      width: 100%;
+      max-width: 100%;
+      border: none;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      background: darken(#f9f9f9, 10%);
+      color: darken(#f9f9f9, 50%);
+    }
+    .btn {
+      display       : inline-block;
+      border-radius : 5%;          /* 角丸       */
+      font-size     : 15px;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 5px 5px;   /* 余白       */
+      background    : #000066;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      border        : 2px solid #000066;    /* 枠の指定 */
+      width: 100px;
+      margin: 15px;
+    }
+  }
+}

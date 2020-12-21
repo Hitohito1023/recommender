@@ -1,12 +1,13 @@
 <h1>PostItems index</h1>
 
-<button class="new-post-btn">
+<div class="post-btn">
 	<% if user_signed_in? %>
 		<%= link_to new_post_item_path do %>
 			<i class="fas fa-pen">投稿</i>
 		<% end %>
 	<% end %>
-</button>
+</div>
+
 
 <div class="post-item-index">
 	<div class="genre-sidebar">

@@ -1,13 +1,18 @@
-<div class="profile-container">
-  <h3 class="profile-name">
-    <%= @user.name %>
-  </h3>
-  <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', fallback: "no_image_icon.jpg" %>
-  <%= @user.introduction %>
-  <% if user_signed_in? %>
-    <% if @user.id == current_user.id %>
-      <%= @user.email %>
-      <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+<h1>User Detail</h1>
+<div class="user-show">
+  <%= attachment_image_tag @user, :profile_image, size:'300x300', fallback: "no_image_icon.jpg" %>
+  <div class="user-show-content">
+    <h2>Name</h2>
+    <p><%= @user.name %></p><br>
+    <h2>Introduction</h2>
+    <p><%= @user.introduction %></p><br>
+    <% if user_signed_in? %>
+      <% if @user.id == current_user.id %>
+        <h2>Email</h2>
+        <p><%= @user.email %></p><br>
+        <%= link_to "Profile Edit", edit_user_path(@user), class:"btn" %>
+      <% end %>
     <% end %>
-  <% end %>
 </div>
+
+
