@@ -11,9 +11,43 @@
 				<p><%= @post_item.genre.name %></p></br>
 				<h2>Recommender</h2>
 				<p><%= link_to @post_item.user.name, user_path(@post_item.user) %></p></br>
+				<div>
+					<i class="fa fa-comment"></i>
+				  <a href="#comments"><%= @post_item.post_comments.count %></a>
+				</div><br>
+
 				<% if @post_item.user == current_user %>
 					<%= link_to "Edit", edit_post_item_path(@post_item), class: 'btn' %>
 					<%= link_to "Destroy", post_item_path(@post_item), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: 'btn' %>
 				<% end %>
 			</div>
 		</div>
+
+
+<h2 class="comment-title">Comments（全<%= @post_item.post_comments.count %>件）</h2>
+
+<div class="post-comment">
+
+  <ol>
+  <% @post_item.post_comments.each do |post_comment| %>
+  	<li>
+      <%= attachment_image_tag post_comment.user, :profile_image, size:'50x50', fallback: "no_image_icon.jpg" %>
+      <%= post_comment.user.name %>
+      [<%= post_comment.created_at.strftime('%Y/%m/%d') %>]<br>
+      <%= post_comment.comment %>
+      <% if post_comment.user == current_user %>
+        <div align="right">
+          <%= link_to "削除", post_item_post_comment_path(post_comment.post_item, post_comment), method: :delete, class: "btn" %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+	</ol>
+
+	<%= form_with(model:[@post_item, @post_comment], local: true) do |f| %>
+  <div class="comment-form">
+  	<%= f.text_area :comment, size:"60x5", placeholder: "コメントをここに" %>
+  	<div align="right"><%= f.submit "comment", class:"btn" %></div>
+  </div>
+	<% end %>
+</div>
