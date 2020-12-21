@@ -1,12 +1,13 @@
 <h1>PostItems index</h1>
 
-<div class="post-btn">
-	<% if user_signed_in? %>
+<% if user_signed_in? %>
+	<div class="post-btn">
 		<%= link_to new_post_item_path do %>
 			<i class="fas fa-pen">投稿</i>
 		<% end %>
-	<% end %>
-</div>
+	</div>
+<% end %>
+
 
 
 <div class="post-item-index">
