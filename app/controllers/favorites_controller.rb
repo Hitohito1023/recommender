@@ -1,17 +1,18 @@
 class FavoritesController < ApplicationController
 
+
   def create
-    post_item = PostItem.find(params[:post_item_id])
-    favorite = current_user.favorites.new(post_item_id: post_item.id)
+    @post_item = PostItem.find(params[:post_item_id])
+    favorite = @post_item.favorites.new(user_id: current_user.id)
     favorite.save
-    redirect_to post_item_path(post_item)
+    render :create
   end
 
   def destroy
-    post_item = PostItem.find(params[:post_item_id])
-    favorite = current_user.favorites.find_by(post_item_id: post_item.id)
+    @post_item = PostItem.find(params[:post_item_id])
+    favorite = @post_item.favorites.find_by(user_id: current_user.id)
     favorite.destroy
-    redirect_to post_item_path(post_item)
+    render :destroy
   end
 
 end
