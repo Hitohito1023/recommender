@@ -13,9 +13,8 @@
 		<p><%= link_to @post_item.user.name, user_path(@post_item.user) %></p></br>
 
 		<div class="post-item-icons">
-			<div>
-				<i class="fa fa-comment"></i>
-			  <a href="#comments"><%= @post_item.post_comments.count %></a>
+			<div id="comment-count_<%= @post_item.id %>">
+				<%= render "post_comments/count", post_item: @post_item %>
 			</div>
 
 			<div id='favorite-btn_<%= @post_item.id %>'>
@@ -31,14 +30,14 @@
 </div>
 
 
-<h2 class="comment-title">Comments（全<%= @post_item.post_comments.count %>件）</h2>
+<h2 class="comment-title">Comments</h2>
 <div class="post-comment">
 
   <ol class="post-comments">
-  	<%= render "post_comments/index", post_item: @post_item %>
+  	<%= render "post_comments/index", post_comments: @post_comments %>
 	</ol>
 
-	<%= form_with model:[@post_item, @post_comment] do |f| %>
+	<%= form_with model:[@post_item, @post_comment], remote: true do |f| %>
   <div class="comment-form">
   	<%= f.text_area :comment, size:"60x5", placeholder: "コメントをここに" %>
   	<div align="right"><%= f.submit "comment", class:"btn" %></div>
