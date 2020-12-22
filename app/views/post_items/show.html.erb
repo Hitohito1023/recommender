@@ -1,38 +1,57 @@
 <h1>Item detail</h1>
 
-		<div class="post-item-show">
-			<%= attachment_image_tag @post_item, :image, size:'400x500', fallback: "no_image.jpg" %>
-			<div class="post-item-recommend">
-				<h2>Title</h2>
-				<p><%= @post_item.name %></p></br>
-				<h2>Recommend</h2>
-				<p><%= @post_item.introduction %></p></br>
-				<h2>Category</h2>
-				<p><%= @post_item.genre.name %></p></br>
-				<h2>Recommender</h2>
-				<p><%= link_to @post_item.user.name, user_path(@post_item.user) %></p></br>
-				<div>
-					<i class="fa fa-comment"></i>
-				  <a href="#comments"><%= @post_item.post_comments.count %></a>
-				</div><br>
+<div class="post-item-show">
+	<%= attachment_image_tag @post_item, :image, size:'400x500', fallback: "no_image.jpg" %>
+	<div class="post-item-recommend">
+		<h2>Title</h2>
+		<p><%= @post_item.name %></p></br>
+		<h2>Recommend</h2>
+		<p><%= @post_item.introduction %></p></br>
+		<h2>Category</h2>
+		<p><%= @post_item.genre.name %></p></br>
+		<h2>Recommender</h2>
+		<p><%= link_to @post_item.user.name, user_path(@post_item.user) %></p></br>
 
-				<% if @post_item.user == current_user %>
-					<%= link_to "Edit", edit_post_item_path(@post_item), class: 'btn' %>
-					<%= link_to "Destroy", post_item_path(@post_item), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: 'btn' %>
-				<% end %>
+		<div class="post-item-icons">
+			<div>
+				<i class="fa fa-comment"></i>
+			  <a href="#comments"><%= @post_item.post_comments.count %></a>
 			</div>
-		</div>
+
+			<% if @post_item.favorited_by?(current_user) %>
+			<div>
+			  <%= link_to post_item_favorites_path(@post_item), method: :delete do %>
+			    <i class="fas fa-coins" aria-hidden="true" style="color: yellow;"></i>
+			    <%= @post_item.favorites.count %> point
+			  <% end %>
+			</div>
+			<% else %>
+			<div>
+			  <%= link_to post_item_favorites_path(@post_item), method: :post do %>
+			    <i class="fas fa-coins" aria-hidden="true"></i>
+			    <%= @post_item.favorites.count %> point
+			  <% end %>
+			</div>
+			<% end %>
+		</div><br>
+
+		<% if @post_item.user == current_user %>
+			<%= link_to "Edit", edit_post_item_path(@post_item), class: 'btn' %>
+			<%= link_to "Destroy", post_item_path(@post_item), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: 'btn' %>
+		<% end %>
+	</div>
+</div>
 
 
 <h2 class="comment-title">Comments（全<%= @post_item.post_comments.count %>件）</h2>
-
 <div class="post-comment">
-
   <ol>
   <% @post_item.post_comments.each do |post_comment| %>
   	<li>
-      <%= attachment_image_tag post_comment.user, :profile_image, size:'50x50', fallback: "no_image_icon.jpg" %>
-      <%= post_comment.user.name %>
+  		<%= link_to user_path(@post_item.user) do %>
+	      <%= attachment_image_tag post_comment.user, :profile_image, size:'50x50', fallback: "no_image_icon.jpg" %>
+	      <%= post_comment.user.name %>
+	    <% end %>
       [<%= post_comment.created_at.strftime('%Y/%m/%d') %>]<br>
       <%= post_comment.comment %>
       <% if post_comment.user == current_user %>
