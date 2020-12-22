@@ -68,6 +68,10 @@
       border        : 2px solid #000066;    /* 枠の指定 */
       width: 100px;
     }
+    .post-item-icons {
+      display: flex;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -177,6 +181,17 @@
   }
   .comment-form {
     margin-left: 100px;
+    textarea {
+      float: left;
+      width: 100%;
+      max-width: 100%;
+      border: none;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      background: darken(#f9f9f9, 10%);
+      color: darken(#f9f9f9, 50%);
+    }
     .btn {
       display       : inline-block;
       border-radius : 5%;          /* 角丸       */
@@ -188,6 +203,7 @@
       color         : #ffffff;     /* 文字色     */
       border        : 2px solid #000066;    /* 枠の指定 */
       width: 100px;
+      margin: 20px;
     }
   }
 }
