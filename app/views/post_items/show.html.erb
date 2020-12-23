@@ -17,9 +17,16 @@
 				<%= render "post_comments/count", post_item: @post_item %>
 			</div>
 
-			<div id='favorite-btn_<%= @post_item.id %>'>
-				<%= render "favorites/favorite-btn", post_item: @post_item %>
-			</div>
+			<% if user_signed_in? %>
+				<div id='favorite-btn_<%= @post_item.id %>'>
+					<%= render "favorites/favorite-btn", post_item: @post_item %>
+				</div>
+			<% else %>
+				<div>
+					<i class="fas fa-coins" aria-hidden="true" style="color: yellow;"></i>
+					<%= @post_item.favorites.count %> point
+				</div>
+			<% end %>
 		</div><br>
 
 		<% if @post_item.user == current_user %>
@@ -37,10 +44,13 @@
   	<%= render "post_comments/index", post_comments: @post_comments %>
 	</ol>
 
-	<%= form_with model:[@post_item, @post_comment], remote: true do |f| %>
-  <div class="comment-form">
-  	<%= f.text_area :comment, size:"60x5", placeholder: "コメントをここに" %>
-  	<div align="right"><%= f.submit "comment", class:"btn" %></div>
-  </div>
+	<% if user_signed_in? %>
+		<%= form_with model:[@post_item, @post_comment], remote: true do |f| %>
+	  <div class="comment-form">
+	  	<%= f.text_area :comment, size:"60x5", placeholder: "コメントをここに" %>
+	  	<div align="right"><%= f.submit "comment", class:"btn" %></div>
+	  </div>
+		<% end %>
 	<% end %>
 </div>
+
