@@ -1,12 +1,30 @@
-<h1>Editing Items</h1>
+<h1>投稿編集</h1>
 
 <%= form_with model:@post_item, local:true do |f| %>
   <div class="post-item-edit">
   	<div class="post-item-edit-image">
     	<h2><%= f.label :image, "Image" %></h2>
-    	<%= attachment_image_tag @post_item, :image, size:'400x500', fallback: "no_image.jpg" %></br>
+    	<%= attachment_image_tag @post_item, :image, id: "img_prev", size:'400x500', fallback: "no_image.jpg" %></br>
     	<%= f.attachment_field :image %>
     </div>
+
+    <script>
+      $(document).on("turbolinks:load", function(){
+        function readURL(input) {
+          if(input.files && input.files[0]){
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              $('#img_prev').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+        $("#post_item_image").change(function(){
+          readURL(this);
+        });
+      });
+    </script>
+
     <div class="post-item-edit-form">
       <h2><%= f.label :name %></h2>
       <%= f.text_field :name %>

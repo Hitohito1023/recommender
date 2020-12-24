@@ -1,4 +1,9 @@
-<h1>User Detail</h1>
+<% if @user.id == current_user.id %>
+<h1>マイページ</h1>
+<% else %>
+<h1><%= @user.name %></h1>
+<% end %>
+
 <div class="user-show">
   <%= attachment_image_tag @user, :profile_image, size:'300x300', fallback: "no_image_icon.jpg" %>
   <div class="user-show-content">

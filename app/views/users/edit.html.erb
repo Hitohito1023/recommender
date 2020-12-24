@@ -1,4 +1,4 @@
-<h1>User edit</h1>
+<h1>登録情報変更</h1>
 
 <%= form_with model:@user, local: true do |f| %>
 
@@ -15,9 +15,27 @@
 <div class="user-edit">
 	<div class="user-edit-image">
 		<h2><%= f.label :profile_image %></h2>
-		<%= attachment_image_tag @user, :profile_image, size:'300x300', fallback: "no_image_icon.jpg" %></br>
+		<%= attachment_image_tag @user, :profile_image, id: "img_prev", size:'300x300', fallback: "no_image_icon.jpg" %></br>
 		<%= f.attachment_field :profile_image, :placeholder =>"#{@user.profile_image}" %>
 	</div>
+
+	<script>
+    $(document).on("turbolinks:load", function(){
+      function readURL(input) {
+        if(input.files && input.files[0]){
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $('#img_prev').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $("#user_profile_image").change(function(){
+        readURL(this);
+      });
+    });
+  </script>
+
 	<div class="user-edit-form">
 		<h2><%= f.label :name %></h2>
 		<%= f.text_field :name, :placeholder =>"#{@user.name}" %>

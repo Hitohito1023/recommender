@@ -1,4 +1,4 @@
-<h1>ユーザー新規登録</h1>
+<h1 align="center">ユーザー新規登録</h1>
 
 <div class="signup-form">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -16,9 +16,26 @@
 
   <div>
     <%= f.label :profileImage, "アカウント画像" %><br/>
-    <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image_icon.jpg"%>
+    <%= attachment_image_tag @user, :profile_image, id:"img_prev", size:"100x100", fallback: "no_image_icon.jpg"%></br>
     <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
-  </div>
+  </div></br>
+
+	<script>
+    $(document).on("turbolinks:load", function(){
+      function readURL(input) {
+        if(input.files && input.files[0]){
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $('#img_prev').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $("#user_profile_image").change(function(){
+        readURL(this);
+      });
+    });
+  </script>
 
   <div class="field">
     <%= f.label :introduction, "紹介文"%><br />
