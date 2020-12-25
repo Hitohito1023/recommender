@@ -46,6 +46,10 @@
 .user-edit {
   display: flex;
   padding: 40px 40px 40px 100px;
+  img {
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.5);
+  }
   .user-edit-form {
     margin-left: 60px;
     #user_name, #user_email, textarea {
@@ -85,4 +89,16 @@
   .user-post-item-content {
     margin: 20px;
   }
+}
+
+.unsubscribe-form {
+  text-align: center;
+  h2, p {
+    margin: 10px;
+  }
+}
+
+.thanks-message {
+  margin: 20px;
+  text-align: center;
 }
