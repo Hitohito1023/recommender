@@ -12,4 +12,8 @@ class PostItem < ApplicationRecord
     favorites.where(user_id: user.id).exists?
   end
 
+  def self.search_for(content, method)
+    PostItem.where('name LIKE ?', '%'+content+'%')
+  end
+
 end
