@@ -5,17 +5,15 @@
 .users-index {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-}
-
-.users-index-content {
-  margin: 20px;
-  img {
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.5);
-  }
-  h3 {
-    text-align: center;
+  .users-index-content {
+    margin: 20px;
+    img {
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.5);
+    }
+    h3 {
+      text-align: center;
+    }
   }
 }
 
