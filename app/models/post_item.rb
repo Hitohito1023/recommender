@@ -16,4 +16,17 @@ class PostItem < ApplicationRecord
     PostItem.where('name LIKE ?', '%'+content+'%')
   end
 
+  def self.sort(selection)
+    case selection
+    when 'new'
+      return all.order(created_at: :DESC)
+    when 'old'
+      return all.order(created_at: :ASC)
+    when 'likes'
+      return find(Favorite.group(:post_item_id).order(Arel.sql('count(post_item_id) desc')).pluck(:post_item_id))
+    when 'dislikes'
+      return find(Favorite.group(:post_item_id).order(Arel.sql('count(post_item_id) asc')).pluck(:post_item_id))
+    end
+  end
+
 end

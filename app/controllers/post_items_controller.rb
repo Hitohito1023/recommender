@@ -56,6 +56,12 @@ class PostItemsController < ApplicationController
   def complete
   end
 
+  def sort
+    selection = params[:keyword]
+    @post_items = PostItem.sort(selection)
+    @genres = Genre.all
+  end
+
   private
 
   def post_item_params

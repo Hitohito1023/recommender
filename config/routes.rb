@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'search/search'
   get '/search', to: 'search#search'
 
+  get 'sort' => 'post_items#sort'
+
   get 'post_items/complete' => 'post_items#complete', as: 'post_items_complete'
 
   resources :users, only: [:index, :show, :edit, :update]
