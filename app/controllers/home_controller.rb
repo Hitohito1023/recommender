@@ -7,6 +7,8 @@ class HomeController < ApplicationController
   end
 
   def ranking
-    @all_ranks = PostItem.find(Favorite.group(:post_item_id).order('count(post_item_id) desc').pluck(:post_item_id))
+    @post_items = PostItem.includes(:favorited_users).sort {|a,b| b.favorited_users.size <=> a.favorited_users.size}
+    @users = User.includes(:favorites_post_items).sort {|a,b| b.favorites_post_items.size <=> a.favorites_post_items.size}
   end
 end
+

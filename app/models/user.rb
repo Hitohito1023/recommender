@@ -7,20 +7,21 @@ class User < ApplicationRecord
   has_many :post_items, dependent: :destroy
   has_many :post_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  has_many :favorites_post_items, through: :favorites, source: :post_item
   attachment :profile_image
 
   scope :only_valid, -> { where(is_valid: true) }
 
   def self.search_for(content, method)
-    if method == 'perfect'
-      User.where(name: content)
-    elsif method == 'forward'
-      User.where('name LIKE ?', content+'%')
-    elsif method == 'backward'
-      User.where('name LIKE ?', '%'+content)
-    else
-      User.where('name LIKE ?', '%'+content+'%')
+    User.where('name LIKE ?', '%'+content+'%')
+  end
+
+  def favorites_count
+    favorites_count = 0
+    @user.post_items.each do |post_item|
+      favorites_count += post_item.favorites.count
     end
   end
+
 
 end

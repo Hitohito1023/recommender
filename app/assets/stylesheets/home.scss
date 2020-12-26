@@ -43,10 +43,6 @@
   flex-wrap: wrap;
 }
 
-#tab-contents p {
-  color: #000;
-  line-height: 2.5;
-}
 
 .tab-content:first-child {
   padding: 20px 20px 60px 20px;
@@ -100,5 +96,70 @@
 }
 
 .tab-content:nth-child(n+4) {
-  margin: 30px;
+  margin: 30px 50px 30px 40px;
+}
+
+.tab-user-content:first-child {
+  padding: 20px 20px 60px 20px;
+  border-bottom: 3px solid black;
+  margin-bottom: 30px;
+  p {
+    background-image: url("crown-gold.jpg");
+    background-size: cover;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.5);
+  }
+}
+
+.tab-user-content:nth-child(2) {
+  padding: 20px 20px 60px 20px;
+  border-bottom: 3px solid black;
+  margin-bottom: 30px;
+  p {
+    background-image: url("crown-silver.jpg");
+    background-size: cover;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.5);
+  }
+}
+
+.tab-user-content:nth-child(3) {
+  padding: 20px 20px 60px 20px;
+  border-bottom: 3px solid black;
+  margin-bottom: 30px;
+  p {
+    background-image: url("crown-bronze.jpg");
+    background-size: cover;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.5);
+  }
+}
+
+.tab-user-content:nth-child(n+4) {
+  margin: 30px 20px 30px 20px;
+  img {
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.5);
+  }
 }
