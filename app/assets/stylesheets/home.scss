@@ -1,3 +1,104 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#tab-menu {
+  display: flex;
+}
+
+#tab-menu li {
+  list-style-type: none;
+  width: 50%;
+}
+
+#tab-menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+#tab-menu .active {
+  background: #fff;
+  color: #000;
+}
+
+#tab-contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#tab-contents .tab {
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #000;
+  border-top: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#tab-contents p {
+  color: #000;
+  line-height: 2.5;
+}
+
+.tab-content:first-child {
+  padding: 20px 20px 60px 20px;
+  border-bottom: 3px solid black;
+  margin-bottom: 30px;
+  p {
+    background-image: url("crown-gold.jpg");
+    background-size: cover;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  img {
+    width: 350px;
+    height: 450px;
+  }
+}
+
+.tab-content:nth-child(2) {
+  padding: 20px 20px 60px 20px;
+  border-bottom: 3px solid black;
+  margin-bottom: 30px;
+  p {
+    background-image: url("crown-silver.jpg");
+    background-size: cover;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  img {
+    width: 350px;
+    height: 450px;
+  }
+}
+
+.tab-content:nth-child(3) {
+  padding: 20px 20px 60px 20px;
+  border-bottom: 3px solid black;
+  margin-bottom: 30px;
+  p {
+    background-image: url("crown-bronze.jpg");
+    background-size: cover;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  img {
+    width: 350px;
+    height: 450px;
+  }
+}
+
+.tab-content:nth-child(n+4) {
+  margin: 30px;
+}
