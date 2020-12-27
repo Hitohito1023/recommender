@@ -5,6 +5,7 @@
   <% end %>
 <% else %>
   <%= link_to post_item_favorites_path(post_item), method: :post, remote: true do %>
+  　ポイントを渡す
     <i class="fas fa-coins" aria-hidden="true"></i>
     <%= post_item.favorites.count %> point
   <% end %>

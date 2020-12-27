@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
   get 'post_items/complete' => 'post_items#complete', as: 'post_items_complete'
 
-  resources :users, only: [:index, :show, :edit, :update]
+  resources :users, only: [:index, :show, :edit, :update] do
+    resource :relationships, only: [:create, :destroy]
+  end
+
   get 'users/:id/unsubscribe' => 'users#unsubscribe', as: 'users_unsubscribe'
   get 'users/thanks' => 'users#thanks', as: 'users_thanks'
   patch 'users/:id/withdraw' => 'users#withdraw', as: 'users_withdraw'
