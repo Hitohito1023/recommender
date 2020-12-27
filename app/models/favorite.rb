@@ -4,5 +4,4 @@ class Favorite < ApplicationRecord
   belongs_to :post_item
 
 
-
 end
