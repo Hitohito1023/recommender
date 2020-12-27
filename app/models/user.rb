@@ -16,12 +16,6 @@ class User < ApplicationRecord
     User.where('name LIKE ?', '%'+content+'%')
   end
 
-  def favorites_count
-    favorites_count = 0
-    @user.post_items.each do |post_item|
-      favorites_count += post_item.favorites.count
-    end
-  end
 
 
 end
