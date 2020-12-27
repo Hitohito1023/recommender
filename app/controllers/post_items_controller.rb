@@ -17,6 +17,7 @@ class PostItemsController < ApplicationController
     @post_item = PostItem.find(params[:id])
     @post_comment = PostComment.new
     @post_comments = @post_item.post_comments.order(created_at: :desc)
+    @user = @post_item.user
   end
 
   def new
