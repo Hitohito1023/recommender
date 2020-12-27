@@ -12,6 +12,16 @@
 		<h2>Recommender</h2>
 		<p><%= link_to @post_item.user.name, user_path(@post_item.user) %></p></br>
 
+		<div>
+			<% if current_user != @user %>
+	  		<% if current_user.following?(@user) %>
+	    		<%= link_to "フォロー中", user_relationships_path(@user.id), method: :delete, class: "btn" %>
+	  		<% else %>
+	    		<%= link_to "フォローする", user_relationships_path(@user.id), method: :post, class: "btn" %>
+	  		<% end %>
+			<% end %>
+		</div></br>
+
 		<div class="post-item-icons">
 			<div id="comment-count_<%= @post_item.id %>">
 				<%= render "post_comments/count", post_item: @post_item %>
@@ -29,13 +39,7 @@
 			<% end %>
 		</div><br>
 
-		<% if current_user != @user %>
-  		<% if current_user.following?(@user) %>
-    		<%= link_to "フォロー中", user_relationships_path(@user.id), method: :delete, class: "btn" %>
-  		<% else %>
-    		<%= link_to "フォローする", user_relationships_path(@user.id), method: :post, class: "btn" %>
-  		<% end %>
-		<% end %>
+
 
 		<% if @post_item.user == current_user %>
 			<%= link_to "Edit", edit_post_item_path(@post_item), class: 'btn' %>
