@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        encrypted_password: "パスワード"
+        password: "パスワード(確認用)"
+      post_item:
+        name: "タイトル"
+        introduction: "紹介文"
+      genre:
+        name: "カテゴリー名"

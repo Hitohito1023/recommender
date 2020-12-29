@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to user_path(@user), notice: '会員情報の更新が完了しました。'
     else
-      render :edit
+      render :edit, alert: '会員情報の更新に失敗しました。'
     end
   end
 
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     @user.post_items.delete_all
     @user.update(is_valid: false)
     reset_session
-    redirect_to root_path
+    redirect_to root_path, notice: 'ご利用ありがとうございました'
   end
 
   def thanks

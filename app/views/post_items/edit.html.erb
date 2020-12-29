@@ -1,6 +1,7 @@
 <h1>投稿編集</h1>
 
 <%= form_with model:@post_item, local:true do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
   <div class="post-item-edit">
   	<div class="post-item-edit-image">
     	<h2><%= f.label :image, "Image" %></h2>
