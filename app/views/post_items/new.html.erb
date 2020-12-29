@@ -2,6 +2,7 @@
 
 <%= form_with model:@post_item, local:true do |f| %>
   <div class="post-item-new">
+    <%= render 'layouts/error_messages', model: f.object %>
   	<div class="post-item-new-image">
     	<h2><%= f.label :image, "Image" %></h2>
     	<%= attachment_image_tag @post_item, :image, id: "img_prev", size:'400x500', fallback: "no_image.jpg" %></br>

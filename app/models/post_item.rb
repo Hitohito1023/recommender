@@ -1,5 +1,9 @@
 class PostItem < ApplicationRecord
 
+  validates :name, presence: true
+  validates :introduction, presence: true
+
+
   belongs_to :user
 
   attachment :image

@@ -31,7 +31,7 @@ class PostItemsController < ApplicationController
       redirect_to post_items_complete_path, notice: "You have created book successfully."
     else
       @post_items = PostItem.all
-      render 'index'
+      render 'new'
     end
   end
 
