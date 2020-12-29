@@ -28,10 +28,10 @@ class PostItemsController < ApplicationController
     @post_item = PostItem.new(post_item_params)
     @post_item.user_id = current_user.id
     if @post_item.save
-      redirect_to post_items_complete_path, notice: "You have created book successfully."
+      redirect_to post_items_complete_path
     else
       @post_items = PostItem.all
-      render 'new'
+      render 'new', alert: "投稿に失敗しました。"
     end
   end
 
@@ -42,16 +42,16 @@ class PostItemsController < ApplicationController
   def update
     @post_item = PostItem.find(params[:id])
     if @post_item.update(post_item_params)
-      redirect_to post_item_path(@post_item), notice: "You have updated book successfully."
+      redirect_to post_item_path(@post_item), notice: "変更を保存しました。"
     else
-      render "edit"
+      render "edit", alert: "変更が保存できませんでした。"
     end
   end
 
   def destroy
     @post_item = PostItem.find(params[:id])
     @post_item.destroy
-    redirect_to post_items_path, notice: "successfully delete book!"
+    redirect_to post_items_path, notice: "投稿を削除しました。"
   end
 
   def complete
