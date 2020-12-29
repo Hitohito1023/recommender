@@ -177,9 +177,23 @@ footer {
     border-color: #bde9ff;
     color: #4c6977;
 }
- 
+
 .alert-danger {
     background-color: #f3c0c0;
     border-color: #f3c0c0;
     color: #3e3a3a;
 }
+
+#error_explanation {
+    color:#262626;
+    background:#FFEBE8;
+    text-align: center;
+    border:2px solid #990000;
+    padding:12px; font-weight:850;
+    width: 350px;
+    margin: 0 auto;
+    li {
+      list-style: none;
+      text-align: left;
+    }
+  }
