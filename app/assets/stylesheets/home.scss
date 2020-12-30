@@ -187,3 +187,21 @@
     height: 500px;
   }
 }
+
+.recommend-items {
+  display: flex;
+  .recommend-item {
+    margin: 20px;
+  }
+}
+
+.recommend-users {
+  display: flex;
+  .recommend-user {
+    margin: 20px;
+    img {
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.5);
+    }
+  }
+}

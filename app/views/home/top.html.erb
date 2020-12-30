@@ -1,4 +1,5 @@
 <h1>top画面</h1>
+
 <div id="top-slide">
   <div id="slide-image">
     <div class="image1"></div>
@@ -6,4 +7,40 @@
     <div class="image3"></div>
     <div class="image4"></div>
   </div>
+</div>
+
+<h3>おすすめ投稿</h3>
+<div class="recommend-items">
+  <% @post_items.each do |post_item| %>
+    <div class="recommend-item">
+    	<%= link_to post_item_path(post_item) do %>
+    		<%= attachment_image_tag post_item, :image, size:'200x300', fallback: "no_image.jpg" %>
+    		<h5><%= post_item.name %></h5>
+    	<% end %>
+    </div>
+  <% end %>
+</div>
+
+<h3>新着投稿</h3>
+<div class="recommend-items">
+  <% @new_post_items.each do |post_item| %>
+    <div class="recommend-item">
+    	<%= link_to post_item_path(post_item) do %>
+    		<%= attachment_image_tag post_item, :image, size:'200x300', fallback: "no_image.jpg" %>
+    		<h5><%= post_item.name %></h5>
+    	<% end %>
+    </div>
+  <% end %>
+</div>
+
+<h3>おすすめユーザー</h3>
+<div class="recommend-users">
+	<% @users.each do |user| %>
+		<div class="recommend-user">
+			<%= link_to user_path(user) do %>
+				<%= attachment_image_tag user, :profile_image, size:'250x250', fallback: "no_image_icon.jpg" %>
+				<h5><%= user.name %></h5>
+			<% end %>
+		</div>
+	<% end %>
 </div>
