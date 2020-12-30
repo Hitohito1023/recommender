@@ -7,9 +7,9 @@
 <div class="user-show">
   <%= attachment_image_tag @user, :profile_image, size:'300x300', fallback: "no_image_icon.jpg" %>
   <div class="user-show-content">
-    <h2>Name</h2>
+    <h2>名前</h2>
     <p><%= @user.name %></p><br>
-    <h2>Introduction</h2>
+    <h2>自己紹介</h2>
     <p><%= @user.introduction %></p><br>
     <p><i class="fas fa-pen"></i>総投稿数：<%= @user.post_items.count %>&emsp;
       <i class="fas fa-coins" style="color: yellow;"></i>獲得総Point：<%= @favorites_count %>
@@ -22,7 +22,7 @@
 
     <% if user_signed_in? %>
       <% if @user.id == current_user.id %>
-        <h2>Email</h2>
+        <h2>登録メールアドレス</h2>
         <p><%= @user.email %></p><br>
         <%= link_to "Profile Edit", edit_user_path(@user), class:"btn" %>
       <% else %>

@@ -28,32 +28,23 @@ $(document).on('turbolinks:load', function () {
   });
 });
 
-// スライドショー
+// Top画面のスライドショー
 $(document).ready(function () {
   $("#slide-image").skippr({
-    // スライドショーの変化 ("fade" or "slide")
     transition : 'slide',
-    // 変化に係る時間(ミリ秒)
     speed : 1000,
-    // easingの種類
     easing : 'easeOutQuart',
-    // ナビゲーションの形("block" or "bubble")
     navType : 'block',
-    // 子要素の種類('div' or 'img')
     childrenElementType : 'div',
-    // ナビゲーション矢印の表示(trueで表示)
     arrows : true,
-    // スライドショーの自動再生(falseで自動再生なし)
     autoPlay : true,
-    // 自動再生時のスライド切替間隔(ミリ秒)
     autoPlayDuration : 3000,
-    // キーボードの矢印キーによるスライド送りの設定(trueで有効)
     keyboardOnAlways : true,
-    // 一枚目のスライド表示時に戻る矢印を表示するかどうか(falseで非表示)
     hidePrevious : false
   });
 });
 
+// おすすめ、新着投稿のスライド
 $(document).ready(function () {
   $('.recommend-items').slick({
   centerMode: true,
@@ -65,6 +56,7 @@ $(document).ready(function () {
   });
 });
 
+// おすすめユーザーのスライド
 $(document).ready(function () {
   $('.recommend-users').slick({
   centerMode: true,
@@ -74,4 +66,36 @@ $(document).ready(function () {
   slidesToShow: 4,
   slidesToScroll: 1
   });
+});
+
+// 投稿画像のプレビュー
+$(document).on("turbolinks:load", function(){
+  function readURL(input) {
+    if(input.files && input.files[0]){
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $('#img_prev').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  $("#post_item_image").change(function(){
+    readURL(this);
+  });
+});
+
+// プロフール画像のプレビュー
+$(document).on("turbolinks:load", function(){
+function readURL(input) {
+  if(input.files && input.files[0]){
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#img_prev').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+$("#user_profile_image").change(function(){
+  readURL(this);
+});
 });

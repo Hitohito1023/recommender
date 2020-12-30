@@ -3,13 +3,13 @@
 <div class="post-item-show">
 	<%= attachment_image_tag @post_item, :image, size:'400x500', fallback: "no_image.jpg" %>
 	<div class="post-item-recommend">
-		<h2>Title</h2>
+		<h2>タイトル</h2>
 		<p><%= @post_item.name %></p></br>
-		<h2>Recommend</h2>
+		<h2>紹介文</h2>
 		<p><%= @post_item.introduction %></p></br>
-		<h2>Category</h2>
+		<h2>カテゴリー</h2>
 		<p><%= @post_item.genre.name %></p></br>
-		<h2>Recommender</h2>
+		<h2>投稿者</h2>
 		<p><%= link_to @post_item.user.name, user_path(@post_item.user) %></p></br>
 
 		<div>
@@ -49,7 +49,7 @@
 </div>
 
 
-<h2 class="comment-title">Comments</h2>
+<h2 class="comment-title">コメント</h2>
 <div class="post-comment">
 
   <ol class="post-comments">

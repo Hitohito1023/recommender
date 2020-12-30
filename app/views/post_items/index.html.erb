@@ -12,7 +12,7 @@
 
 <div class="post-item-index">
 	<div class="genre-sidebar">
-		<h3>Category</h3>
+		<h3>カテゴリー</h3>
 		<% @genres.each do |genre| %>
 			<%= link_to genre.name, post_items_path(genre_id: genre.id) %>
 		<% end %>
