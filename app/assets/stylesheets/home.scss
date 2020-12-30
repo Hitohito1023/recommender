@@ -164,7 +164,7 @@
   }
 }
 
-#top-slide {
+#about-slide {
   height: 500px;
   .image1 {
     background-image: image-url("test1.jpg");
@@ -181,7 +181,7 @@
     background-size: cover;
     height: 500px;
   }
-  .image3 {
+  .image4 {
     background-image: image-url("test4.jpg");
     background-size: cover;
     height: 500px;
@@ -190,18 +190,46 @@
 
 .recommend-items {
   display: flex;
-  .recommend-item {
-    margin: 20px;
-  }
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .recommend-users {
   display: flex;
+  width: 1200px;
+  margin: 0 auto;
   .recommend-user {
     margin: 20px;
+    text-align: center;
     img {
       border-radius: 50%;
       border: 1px solid rgba(0,0,0,0.5);
     }
   }
+}
+
+.fa-chevron-left {
+  color: #FFFFFF;
+  font-size: 50px;
+  position: absolute;
+  z-index: 100;
+  left: -45px;
+  top: 145px;
+}
+
+.fa-chevron-right {
+  color: #FFFFFF;
+  font-size: 50px;
+  position: absolute;
+  z-index: 100;
+  right: -45px;
+  top: 140px
+}
+
+.top-slide {
+  margin-bottom: 50px;
+}
+
+#about-slide {
+  margin-bottom: 50px;
 }

@@ -53,3 +53,25 @@ $(document).ready(function () {
     hidePrevious : false
   });
 });
+
+$(document).ready(function () {
+  $('.recommend-items').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  prevArrow: '<i class="fas fa-chevron-left"></i>',
+  nextArrow: '<i class="fas fa-chevron-right"></i>',
+  slidesToShow: 4,
+  slidesToScroll: 1
+  });
+});
+
+$(document).ready(function () {
+  $('.recommend-users').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  prevArrow: '<i class="fas fa-chevron-left"></i>',
+  nextArrow: '<i class="fas fa-chevron-right"></i>',
+  slidesToShow: 4,
+  slidesToScroll: 1
+  });
+});
