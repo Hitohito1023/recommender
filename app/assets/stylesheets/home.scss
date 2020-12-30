@@ -163,3 +163,27 @@
     border: 1px solid rgba(0,0,0,0.5);
   }
 }
+
+#top-slide {
+  height: 500px;
+  .image1 {
+    background-image: image-url("test1.jpg");
+    background-size: cover;
+    height: 500px;
+  }
+  .image2 {
+    background-image: image-url("test2.jpg");
+    background-size: cover;
+    height: 500px;
+  }
+  .image3 {
+    background-image: image-url("test3.jpg");
+    background-size: cover;
+    height: 500px;
+  }
+  .image3 {
+    background-image: image-url("test4.jpg");
+    background-size: cover;
+    height: 500px;
+  }
+}
