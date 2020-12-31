@@ -1,6 +1,6 @@
 class PostComment < ApplicationRecord
 
-  validates :comment, presence: true
+  validates :comment, presence: true, length: { maximum: 100 }
 
 
   belongs_to :user

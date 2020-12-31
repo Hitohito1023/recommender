@@ -29,7 +29,7 @@ $(document).on('turbolinks:load', function () {
 });
 
 // Top画面のスライドショー
-$(document).ready(function () {
+$(document).on('turbolinks:load',function () {
   $("#slide-image").skippr({
     transition : 'slide',
     speed : 1000,
@@ -45,19 +45,19 @@ $(document).ready(function () {
 });
 
 // おすすめ、新着投稿のスライド
-$(document).ready(function () {
+$(document).on('turbolinks:load',function () {
   $('.recommend-items').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  prevArrow: '<i class="fas fa-chevron-left"></i>',
-  nextArrow: '<i class="fas fa-chevron-right"></i>',
-  slidesToShow: 4,
-  slidesToScroll: 1
+    centerMode: true,
+    centerPadding: '60px',
+    prevArrow: '<i class="fas fa-chevron-left"></i>',
+    nextArrow: '<i class="fas fa-chevron-right"></i>',
+    slidesToShow: 4,
+    slidesToScroll: 1
   });
 });
 
 // おすすめユーザーのスライド
-$(document).ready(function () {
+$(document).on('turbolinks:load',function () {
   $('.recommend-users').slick({
   centerMode: true,
   centerPadding: '60px',
@@ -86,16 +86,25 @@ $(document).on("turbolinks:load", function(){
 
 // プロフール画像のプレビュー
 $(document).on("turbolinks:load", function(){
-function readURL(input) {
-  if(input.files && input.files[0]){
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      $('#img_prev').attr('src', e.target.result);
+  function readURL(input) {
+    if(input.files && input.files[0]){
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $('#img_prev').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
     }
-    reader.readAsDataURL(input.files[0]);
   }
-}
-$("#user_profile_image").change(function(){
-  readURL(this);
+  $("#user_profile_image").change(function(){
+    readURL(this);
+  });
 });
+
+//文字数カウント
+$(document).on("turbolinks:load", function(){
+  $(".js-text").on("keyup", function() {
+    let countNum = String($(this).val().length);
+    $(".counter").text(countNum + "文字");
+  });
 });
+

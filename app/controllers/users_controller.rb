@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :ensure_correct_user, only: [:edit, :update, :unsubscribe, :withdraw]
 
   def index
-    @users = User.only_valid
+    @users = User.only_valid.page(params[:page]).reverse_order
   end
 
   def show

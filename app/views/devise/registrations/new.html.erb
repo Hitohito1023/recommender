@@ -24,7 +24,8 @@
 
   <div class="field">
     <%= f.label :introduction, "紹介文"%><br />
-    <%= f.text_area :introduction, autofocus: true, autocomplete: "introduction", placeholder: "登録後でも設定が可能です" %>
+    <%= f.text_area :introduction, class: 'js-text', autofocus: true, autocomplete: "introduction", placeholder: "100文字まで入力が可能です。登録後でも設定が可能です。" %>
+    <p class="counter">0文字</p>
   </div>
 
   <div class="field">
