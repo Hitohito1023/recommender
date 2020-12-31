@@ -29,7 +29,7 @@ $(document).on('turbolinks:load', function () {
 });
 
 // Top画面のスライドショー
-$(document).ready(function () {
+$(document).on('turbolinks:load',function () {
   $("#slide-image").skippr({
     transition : 'slide',
     speed : 1000,
@@ -45,7 +45,7 @@ $(document).ready(function () {
 });
 
 // おすすめ、新着投稿のスライド
-$(document).ready(function () {
+$(document).on('turbolinks:load',function () {
   $('.recommend-items').slick({
   centerMode: true,
   centerPadding: '60px',
@@ -57,7 +57,7 @@ $(document).ready(function () {
 });
 
 // おすすめユーザーのスライド
-$(document).ready(function () {
+$(document).on('turbolinks:load',function () {
   $('.recommend-users').slick({
   centerMode: true,
   centerPadding: '60px',

@@ -3,6 +3,7 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :email, presence: true
   validates :encrypted_password, presence: true
+  validates :introduction, length: { maximum: 100 }
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
