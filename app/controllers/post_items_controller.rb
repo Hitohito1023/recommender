@@ -5,11 +5,11 @@ class PostItemsController < ApplicationController
     @genres = Genre.all
     if params[:genre_id]
       @genre = @genres.find(params[:genre_id])
-      all_post_items = @genre.post_items
+      all_post_items = @genre.post_items.page(params[:page]).reverse_order
     else
-      all_post_items = PostItem.all
+      all_post_items = PostItem.page(params[:page]).reverse_order
     end
-    @post_items = all_post_items
+    @post_items = all_post_items.page(params[:page]).reverse_order
     @all_post_items_count = all_post_items.count
   end
 
