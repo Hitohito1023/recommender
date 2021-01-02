@@ -16,8 +16,12 @@ class PostItemsController < ApplicationController
   def show
     @post_item = PostItem.find(params[:id])
     @post_comment = PostComment.new
-    @post_comments = @post_item.post_comments.order(created_at: :desc)
+    @post_comments = @post_item.post_comments.order(created_at: :desc).page(params[:page]).per(6)
     @user = @post_item.user
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new

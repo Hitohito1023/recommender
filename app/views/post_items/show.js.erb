@@ -1,0 +1,4 @@
+$('#comment-index').append("<%= escape_javascript(render 'post_comments/index', object: @post_comments) %>")
+$("#more-link").replaceWith("<%= escape_javascript(
+  link_to_next_page(@post_comments, 'もっと見る', remote: true, class: 'more-link', id: 'more-link')
+) %>");
