@@ -40,6 +40,7 @@ header {
 
 .header-title {
   margin-left: 30px;
+  padding-top: 10px;
   a {
     height: 70px;
     img {
@@ -201,3 +202,45 @@ footer {
     }
   }
 
+.dropdown-menu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  background-color: gray;
+  width: 140px;
+  border: 1px solid black;
+  li {
+    margin: 5px;
+  }
+}
+
+
+.paginate {
+  margin: 30px auto;
+  .pagination{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+     span{
+      background-color: rgba(158, 158, 158, 0.4);
+      text-align: center;
+      width: 50px;
+      border: solid 1px #344963;
+      color: rgb(197, 20, 159);
+      transition: .3s;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      }
+     span:hover{
+      transition: .3s;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+     span a:hover{
+      transition: .3s;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+}
