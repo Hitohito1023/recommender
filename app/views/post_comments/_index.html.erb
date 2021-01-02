@@ -1,4 +1,5 @@
-<% post_comments.each do |post_comment| %>
+<ol class="post-comments">
+<% @post_comments.each do |post_comment| %>
 	<li>
 		<%= link_to user_path(post_comment.user) do %>
       <%= attachment_image_tag post_comment.user, :profile_image, size:'50x50', fallback: "no_image_icon.jpg" %>
@@ -13,3 +14,5 @@
     <% end %>
   </li>
 <% end %>
+</ol>
+

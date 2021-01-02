@@ -1,5 +1,7 @@
 class PostItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :complete]
+  before_action :ensure_correct_user, only: [:new, :edit, :create, :update, :destroy, :complete]
+
 
   def index
     @genres = Genre.all
@@ -14,13 +16,19 @@ class PostItemsController < ApplicationController
   end
 
   def show
+    @genres = Genre.all
     @post_item = PostItem.find(params[:id])
     @post_comment = PostComment.new
-    @post_comments = @post_item.post_comments.order(created_at: :desc)
+    @post_comments = @post_item.post_comments.order(created_at: :desc).page(params[:page]).per(6)
     @user = @post_item.user
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new
+    @genres = Genre.all
     @post_item = PostItem.new
   end
 
@@ -36,6 +44,7 @@ class PostItemsController < ApplicationController
   end
 
   def edit
+    @genres = Genre.all
     @post_item = PostItem.find(params[:id])
   end
 
@@ -55,12 +64,20 @@ class PostItemsController < ApplicationController
   end
 
   def complete
+    @genres = Genre.all
   end
 
   private
 
   def post_item_params
     params.require(:post_item).permit(:name, :introduction, :image, :genre_id)
+  end
+
+  def ensure_correct_user
+    @post_item = PostItem.find(params[:id])
+    unless @post_item.user == current_user
+      redirect_to user_path(current_user), notice: "権限がございません"
+    end
   end
 
 end
