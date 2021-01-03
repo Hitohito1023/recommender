@@ -1,7 +1,7 @@
-<% if @user.id == current_user.id %>
-<h1>マイページ</h1>
+<% if @user == current_user %>
+  <h1>マイページ</h1>
 <% else %>
-<h1><%= @user.name %></h1>
+  <h1><%= @user.name %></h1>
 <% end %>
 
 <div class="user-show">

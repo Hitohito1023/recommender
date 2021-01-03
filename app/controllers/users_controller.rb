@@ -4,11 +4,9 @@ class UsersController < ApplicationController
 
   def index
     @users = User.only_valid.page(params[:page]).reverse_order
-    @genres = Genre.all
   end
 
   def show
-    @genres = Genre.all
     @user = User.find(params[:id])
     @favorites_count = 0
     @user.post_items.each do |post_item|
@@ -17,7 +15,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @genres = Genre.all
     @user = User.find(params[:id])
   end
 
@@ -32,12 +29,10 @@ class UsersController < ApplicationController
 
 
   def unsubscribe
-    @genres = Genre.all
     @user = current_user
   end
 
   def withdraw
-    @genres = Genre.all
     @user = User.find(current_user.id)
     @user.post_items.delete_all
     @user.update(is_valid: false)
@@ -46,7 +41,6 @@ class UsersController < ApplicationController
   end
 
   def thanks
-    @genres = Genre.all
   end
 
   private
