@@ -15,17 +15,18 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <div id="contents">
+      <%= render 'layouts/header' %>
 
-    <main>
-      <%= render 'search/search_form' %>
-      <%= render 'layouts/notice' %>
-      <%= yield %>
-    </main>
+      <main>
+        <%= render 'search/search_form' %>
+        <%= render 'layouts/notice' %>
+        <%= yield %>
+      </main>
 
-    <footer>
-      <p>© All rights reserved by ryota.</p>
-    </footer>
-
+      <footer>
+        <p>© All rights reserved by ryota.</p>
+      </footer>
+    </div>
   </body>
 </html>

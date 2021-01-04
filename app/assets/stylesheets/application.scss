@@ -21,16 +21,18 @@
 
 html,　body {
   height: 100%;
-  background-color: #35333e;
+  // background-color: #35333e;
   font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック';
-  color: #ddd;
+  color: black;
 }
 
 a {
   color: #f25042
 }
 
-
+#contents {
+  height: 100%;
+}
 header {
   display: flex;
   width: 100%;
@@ -85,11 +87,11 @@ main {
 footer {
   width: 100%;
   text-align: center;
-  padding: 50px 0;
+  padding: 30px 0;
   background-color: #222127;
-  height: 10px;
+  height: 100%;
   // position: absolute;
-  bottom: 0;
+  // bottom: 0;
 }
 
 // form {
@@ -101,6 +103,7 @@ footer {
 .login-form {
   width: 400px;
   margin: 0 auto;
+  height: 560px;
   #user_email, #user_password {
     width: 370px;
     border: none;

@@ -81,6 +81,7 @@
 .user-post-item {
   display: flex;
   flex-wrap: wrap;
+  min-height: 125px;
   img {
     border-radius: 2%;
   }
