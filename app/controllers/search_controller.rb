@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
-  	def search
-  	@genres = Genre.all
+	def search
+		@genres = Genre.all
 		@model = params[:model]
 		@content = params[:content]
 		@method = params[:method]

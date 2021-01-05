@@ -27,4 +27,3 @@ class PostCommentsController < ApplicationController
   end
 
 end
-
