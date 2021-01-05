@@ -1,6 +1,6 @@
 class PostItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :complete]
-  before_action :ensure_correct_user, only: [:new, :edit, :create, :update, :destroy, :complete]
+  before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
 
   def index
@@ -16,7 +16,6 @@ class PostItemsController < ApplicationController
   end
 
   def show
-    @genres = Genre.all
     @post_item = PostItem.find(params[:id])
     @post_comment = PostComment.new
     @post_comments = @post_item.post_comments.order(created_at: :desc).page(params[:page]).per(6)
@@ -28,7 +27,6 @@ class PostItemsController < ApplicationController
   end
 
   def new
-    @genres = Genre.all
     @post_item = PostItem.new
   end
 

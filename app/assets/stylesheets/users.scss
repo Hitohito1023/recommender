@@ -81,6 +81,10 @@
 .user-post-item {
   display: flex;
   flex-wrap: wrap;
+  min-height: 125px;
+  img {
+    border-radius: 2%;
+  }
   a {
     margin: 20px 30px 0 0;
     text-align: center;
