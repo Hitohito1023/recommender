@@ -18,7 +18,7 @@ class PostItem < ApplicationRecord
   end
 
   def self.search_for(content, method)
-    PostItem.where('name LIKE ?', '%'+content+'%')
+    PostItem.where('name LIKE ?', '%' + content + '%')
   end
 
 end

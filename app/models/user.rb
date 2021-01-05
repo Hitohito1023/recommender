@@ -22,7 +22,7 @@ class User < ApplicationRecord
   scope :only_valid, -> { where(is_valid: true) }
 
   def self.search_for(content, method)
-    User.where('name LIKE ?', '%'+content+'%')
+    User.where('name LIKE ?', '%' + content + '%')
   end
 
   def follow(user_id)

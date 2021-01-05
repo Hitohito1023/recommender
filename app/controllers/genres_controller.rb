@@ -27,7 +27,7 @@ class GenresController < ApplicationController
     if @genre.update(genre_params)
       redirect_to genres_path, notice: "変更が保存されました。"
     else
-       render :edit, alert: "変更が保存できませんでした。"
+      render :edit, alert: "変更が保存できませんでした。"
     end
   end
 
