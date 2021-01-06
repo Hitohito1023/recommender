@@ -251,31 +251,62 @@
 }
 
 .a {
-  background-color: blue;
-  width: 500px;
+  width: 1240px;
   height: 500px;
   position: absolute;
+  display: flex;
+  .top-image1 {
+    background-color: blue;
+    width: 620px;
+    height: 500px;
+  }
+  .btn1 {
+    height: 50px;
+  }
 }
 
 .b {
-  background-color: red;
-  width: 500px;
+  width: 1240px;
   height: 500px;
   position: absolute;
+  display: flex;
+  .top-image2 {
+    background-color: red;
+    width: 620px;
+    height: 500px;
+  }
+  .btn2 {
+    height: 50px;
+  }
 }
-
 .c {
-  background-color: yellow;
-  width: 500px;
+  width: 1240px;
   height: 500px;
   position: absolute;
-
+  display: flex;
+  .top-image3 {
+    background-color: yellow;
+    width: 620px;
+    height: 500px;
+  }
+  .btn3 {
+    height: 50px;
+  }
 }
-
 
 .d {
-  background-color: black;
-  width: 500px;
+  width: 1240px;
   height: 500px;
   position: absolute;
+  display: flex;
+  .top-image4 {
+    background-color: green;
+    width: 620px;
+    height: 500px;
+  }
+  .btn4 {
+    height: 50px;
+  }
 }
+
+
