@@ -1,12 +1,12 @@
 class HomeController < ApplicationController
 
+  def start
+  end
+
   def top
     @post_items = PostItem.order("RANDOM()").limit(10)
     @new_post_items = PostItem.order("id DESC").limit(10)
     @users = User.order("RANDOM()").limit(10)
-  end
-
-  def about
   end
 
   def ranking

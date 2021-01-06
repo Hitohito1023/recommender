@@ -116,3 +116,40 @@ $(document).on("turbolinks:load", function(){
     $(this).find('.dropdown-menu').slideUp(300);
   });
 });
+
+//start画面
+// $(document).on("turbolinks:load",function(){
+//   $('.section').hide();
+//   $('.secList').on('click',function(){
+//     // クリックした要素の ID と違うクラス名のセクションを非表示
+//     $('.section').not($('.'+$(this).attr('id'))).hide();
+//     // クリックした要素の ID と同じクラスのセクションを表示
+//     $('.'+$(this).attr('id')).show();
+//     // toggle にすると、同じボタンを 2 回押すと非表示になる
+//     // $('.'+$(this).attr('id')).toggle();
+//   });
+// });
+
+// $(document).on("turbolinks:load", function(){
+//   $('.b').hide();
+//   $(".btn").click(function() {
+//     $(".a").animate( { width: 'hide' }, 'slow' );
+//     $(".b").animate( { width: 'show' }, 'slow' );
+//   });
+// });
+
+$(document).on("turbolinks:load", function(){
+  $('.section').hide();
+  $('.btn1').on('click', function() {
+    $('.a').fadeOut(2000);
+    $('.b').fadeIn(2000);
+  });
+  $('.btn2').on('click', function() {
+    $('.b').fadeOut(2000);
+    $('.c').fadeIn(2000);
+  });
+  $('.btn3').on('click', function() {
+    $('.c').fadeOut(2000);
+    $('.d').fadeIn(2000);
+  });
+});
