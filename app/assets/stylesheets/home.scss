@@ -54,7 +54,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-gold.jpg");
+    background-image: image-url("crown-gold.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -71,7 +71,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-silver.jpg");
+    background-image: image-url("crown-silver.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -88,7 +88,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-bronze.jpg");
+    background-image: image- url("crown-bronze.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -109,7 +109,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-gold.jpg");
+    background-image: image-url("crown-gold.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -128,7 +128,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-silver.jpg");
+    background-image: image-url("crown-silver.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -147,7 +147,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-bronze.jpg");
+    background-image: image-url("crown-bronze.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -247,65 +247,175 @@
 }
 
 .start {
-  height: 1000px;
+  margin: 20px auto;
+  height: 570px;
 }
 
-.a {
+.start-1, .start-6 {
+  width: 1240px;
+  text-align: center;
+  position: absolute;
+  h1 {
+    height: 200px;
+    padding: 100px;
+  }
+  a {
+    margin: 30px;
+    color: #FFFFFF;
+  }
+  .btn, .btn1 {
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #000066;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #000066;    /* 枠の指定 */
+    // width: 180px;
+    margin: 0 30px 0 30px;
+  }
+}
+
+.start-2 {
   width: 1240px;
   height: 500px;
   position: absolute;
   display: flex;
   .top-image1 {
-    background-color: blue;
-    width: 620px;
+    background-image: image-url("about1.jpeg");
+    background-size: cover;
+    width: 750px;
     height: 500px;
   }
-  .btn1 {
-    height: 50px;
+  .start-2-content {
+    width: 490px;
+    text-align: center;
+    h2 {
+      margin: 70px 0 40px 0;
+    }
+    h3 {
+      margin: 20px 0 20px 0;
+    }
+  }
+  .btn2 {
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #000066;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #000066;    /* 枠の指定 */
+    width: 180px;
+    margin: 0 30px 0 30px;
+    display: inline-block;
   }
 }
 
-.b {
+.start-3 {
   width: 1240px;
   height: 500px;
   position: absolute;
   display: flex;
   .top-image2 {
-    background-color: red;
+    background-image: image-url("about2.jpeg");
+    background-size: cover;
     width: 620px;
     height: 500px;
   }
-  .btn2 {
-    height: 50px;
+  .start-3-content {
+  width: 490px;
+  text-align: center;
+    h2 {
+      margin: 70px 0 40px 0;
+    }
+    h3 {
+      margin: 20px 0 20px 0;
+    }
+  }
+  .btn3 {
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #000066;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #000066;    /* 枠の指定 */
+    width: 180px;
+    margin: 0 30px 0 30px;
+    display: inline-block;
   }
 }
-.c {
+.start-4 {
   width: 1240px;
   height: 500px;
   position: absolute;
   display: flex;
   .top-image3 {
-    background-color: yellow;
-    width: 620px;
-    height: 500px;
+    background-image: image-url("about3.jpeg");
+    background-size: cover;
+    width: 800px;
+    height: 530px;
   }
-  .btn3 {
-    height: 50px;
+  .start-4-content {
+    text-align: center;
+    h2 {
+      margin: 70px 0 40px 0;
+    }
+    h3 {
+      margin: 20px 0 20px 0;
+    }
+    .btn4 {
+      border-radius : 5%;          /* 角丸       */
+      font-size     : 15px;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 5px 5px;   /* 余白       */
+      background    : #000066;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      border        : 2px solid #000066;    /* 枠の指定 */
+      width: 180px;
+      margin: 0 30px 0 30px;
+      display: inline-block;
+    }
   }
 }
 
-.d {
+.start-5 {
   width: 1240px;
   height: 500px;
   position: absolute;
   display: flex;
   .top-image4 {
-    background-color: green;
+    background-image: image-url("about4.jpeg");
+    background-size: cover;
     width: 620px;
     height: 500px;
   }
-  .btn4 {
-    height: 50px;
+  .start-5-content {
+    text-align: center;
+    width: 600px;
+    h2 {
+      margin: 70px 0 40px 0;
+    }
+    h3 {
+      margin: 20px 0 20px 0;
+    }
+    .btn5 {
+      border-radius : 5%;          /* 角丸       */
+      font-size     : 15px;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 5px 5px;   /* 余白       */
+      background    : #000066;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      border        : 2px solid #000066;    /* 枠の指定 */
+      width: 180px;
+      margin: 0 30px 0 30px;
+      display: inline-block;
+    }
   }
 }
 
