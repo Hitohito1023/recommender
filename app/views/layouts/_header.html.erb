@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
         <header>
             <h1 class="header-title">
-              <%= link_to root_path do %>
+              <%= link_to home_top_path do %>
                 <%= image_tag 'logo.jpg' %>
               <% end %>
             </h1>
@@ -28,7 +28,7 @@
         <% else %>
         <header>
             <h1 class="header-title">
-              <%= link_to root_path do %>
+              <%= link_to home_top_path do %>
                 <%= image_tag 'logo.jpg' %>
               <% end %>
             </h1>
