@@ -197,6 +197,7 @@
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  text-align: center;
   img {
     border-radius: 2%;
     border: 2px solid #222127;
@@ -218,7 +219,7 @@
 }
 
 .fa-chevron-left {
-  color: #FFFFFF;
+  color: black;
   font-size: 50px;
   position: absolute;
   z-index: 100;
@@ -227,7 +228,7 @@
 }
 
 .fa-chevron-right {
-  color: #FFFFFF;
+  color: black;
   font-size: 50px;
   position: absolute;
   z-index: 100;
