@@ -109,7 +109,7 @@ $(document).on("turbolinks:load", function(){
 });
 
 // headerのドロップダウンメニュー
-$(function(){
+$(document).on("turbolinks:load",function(){
   $('.dropdown').hover(function() {
     $(this).find('.dropdown-menu').slideDown(true).fadeIn(500);
   },function() {

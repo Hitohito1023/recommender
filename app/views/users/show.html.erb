@@ -38,7 +38,7 @@
   </div>
 </div>
 
-<h1><%= @user.name.truncate(20) %>さんの投稿 (全<%= @user.post_items.count %>件)</h1>
+<h2 class="user-post"><%= @user.name.truncate(20) %>さんの投稿 (全<%= @user.post_items.count %>件)</h2>
 <div class="user-post-item">
 	<% if @user.post_items.first %>
 		<% @user.post_items.each do |post_item| %>

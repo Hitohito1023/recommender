@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.wrap {
+  margin-bottom: 50px;
+}
 
 #tab-menu {
   display: flex;
@@ -238,7 +241,7 @@
 
 .top-slide {
   margin-bottom: 50px;
-  h3 {
+  h2 {
     border-bottom: 2px solid black;
   }
 }
