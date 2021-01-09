@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
 
   get 'users/:id/unsubscribe' => 'users#unsubscribe', as: 'users_unsubscribe'
-  get 'users/thanks' => 'users#thanks', as: 'users_thanks'
+  get '/thanks' => 'users#thanks', as: 'thanks'
   patch 'users/:id/withdraw' => 'users#withdraw', as: 'users_withdraw'
 
 

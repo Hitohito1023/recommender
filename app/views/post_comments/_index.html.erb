@@ -9,7 +9,7 @@
     <%= post_comment.comment %>
     <% if post_comment.user == current_user %>
       <div align="right">
-        <%= link_to "削除", post_item_post_comment_path(post_comment.post_item, post_comment), method: :delete, remote: true, class: "btn" %>
+        <%= link_to "削除", post_item_post_comment_path(post_comment.post_item, post_comment), method: :delete, remote: true, class: "btn-danger" %>
       </div>
     <% end %>
   </li>
