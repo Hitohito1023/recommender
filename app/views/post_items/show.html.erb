@@ -44,8 +44,8 @@
 
 
 		<% if @post_item.user == current_user %>
-			<%= link_to "Edit", edit_post_item_path(@post_item), class: 'btn' %>
-			<%= link_to "Destroy", post_item_path(@post_item), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: 'btn' %>
+			<%= link_to "編集", edit_post_item_path(@post_item), class: 'btn' %>
+			<%= link_to "削除", post_item_path(@post_item), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: 'btn' %>
 		<% end %>
 	</div>
 </div>
@@ -64,11 +64,11 @@
 		<%= form_with model:[@post_item, @post_comment], remote: true do |f| %>
 	  <div class="comment-form">
 	  	<%= f.text_area :comment, size:"60x5", placeholder: "コメントをここに" %>
-	  	<div align="right"><%= f.submit "comment", class:"btn" %></div>
+	  	<div align="right"><%= f.submit "コメント", class:"btn" %></div>
 	  </div>
 		<% end %>
 	<% else %>
-		<p>コメントには登録が必要です</p>
+		<p>　　※コメントには登録が必要です</p>
 	<% end %>
 </div>
 

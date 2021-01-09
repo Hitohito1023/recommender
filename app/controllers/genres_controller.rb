@@ -5,10 +5,6 @@ class GenresController < ApplicationController
     @genres = Genre.all
   end
 
-  def new
-    @genre = Genre.new
-  end
-
   def edit
     @genre = Genre.find(params[:id])
   end
@@ -16,9 +12,9 @@ class GenresController < ApplicationController
   def create
     @genre = Genre.new(genre_params)
     if @genre.save
-      redirect_to genres_path, notice: "カテゴリーを追加しました。"
+      redirect_to new_post_item_path, notice: "カテゴリーを追加しました。"
     else
-      render :new, alert: "カテゴリーの追加に失敗しました。"
+      redirect_to new_post_item_path, alert: "カテゴリーの追加に失敗しました。"
     end
   end
 

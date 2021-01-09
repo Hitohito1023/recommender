@@ -91,7 +91,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: image- url("crown-bronze.jpg");
+    background-image: image-url("crown-bronze.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -262,6 +262,7 @@
   h1 {
     height: 200px;
     padding: 100px;
+    border-bottom: none;
   }
   a {
     margin: 30px;
@@ -273,9 +274,9 @@
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
     padding       : 5px 5px;   /* 余白       */
-    background    : #000066;     /* 背景色     */
+    background    : #03A9F4;     /* 背景色     */
     color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #000066;    /* 枠の指定 */
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
     // width: 180px;
     margin: 0 30px 0 30px;
   }
@@ -308,9 +309,9 @@
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
     padding       : 5px 5px;   /* 余白       */
-    background    : #000066;     /* 背景色     */
+    background    : #03A9F4;     /* 背景色     */
     color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #000066;    /* 枠の指定 */
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
     width: 180px;
     margin: 0 30px 0 30px;
     display: inline-block;
@@ -344,9 +345,9 @@
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
     padding       : 5px 5px;   /* 余白       */
-    background    : #000066;     /* 背景色     */
+    background    : #03A9F4;     /* 背景色     */
     color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #000066;    /* 枠の指定 */
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
     width: 180px;
     margin: 0 30px 0 30px;
     display: inline-block;
@@ -377,9 +378,9 @@
       text-align    : center;      /* 文字位置   */
       cursor        : pointer;     /* カーソル   */
       padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
+      background    : #03A9F4;     /* 背景色     */
       color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
+      border        : 2px solid #03A9F4;    /* 枠の指定 */
       width: 180px;
       margin: 0 30px 0 30px;
       display: inline-block;
@@ -413,9 +414,9 @@
       text-align    : center;      /* 文字位置   */
       cursor        : pointer;     /* カーソル   */
       padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
+      background    : #03A9F4;     /* 背景色     */
       color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
+      border        : 2px solid #03A9F4;    /* 枠の指定 */
       width: 180px;
       margin: 0 30px 0 30px;
       display: inline-block;

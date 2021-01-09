@@ -8,9 +8,9 @@
   text-align    : center;      /* 文字位置   */
   cursor        : pointer;     /* カーソル   */
   padding       : 5px 5px;   /* 余白       */
-  background    : #000066;     /* 背景色     */
+  background    : #03A9F4;     /* 背景色     */
   color         : #ffffff;     /* 文字色     */
-  border        : 2px solid #000066;    /* 枠の指定 */
+  border        : 2px solid #03A9F4;    /* 枠の指定 */
   width: 100px;
   margin: 20px 0 0 auto;
   a {
@@ -34,6 +34,7 @@
     margin: 35px 20px 0 0;
     a {
       display: block;
+      color: #FFFFFF;
     }
     h3 {
       border-bottom: 2px solid black;
@@ -82,9 +83,9 @@
       text-align    : center;      /* 文字位置   */
       cursor        : pointer;     /* カーソル   */
       padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
+      background    : #03A9F4;     /* 背景色     */
       color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
+      border        : 2px solid #03A9F4;    /* 枠の指定 */
       width: 100px;
     }
     .post-item-icons {
@@ -130,9 +131,9 @@
       text-align    : center;      /* 文字位置   */
       cursor        : pointer;     /* カーソル   */
       padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
+      background    : #03A9F4;     /* 背景色     */
       color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
+      border        : 2px solid #03A9F4;    /* 枠の指定 */
       width: 100px;
     }
   }
@@ -160,9 +161,9 @@
     select {
       width: 200px;
     }
-    .post-btn {
-      margin: 80px 0;
-    }
+    // .post-btn {
+    //   margin: 20px 0;
+    // }
     .btn {
       display       : inline-block;
       border-radius : 5%;          /* 角丸       */
@@ -170,10 +171,11 @@
       text-align    : center;      /* 文字位置   */
       cursor        : pointer;     /* カーソル   */
       padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
+      background    : #03A9F4;     /* 背景色     */
       color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
-      width: 100px;
+      border        : 2px solid #03A9F4;    /* 枠の指定 */
+      width: 150px;
+      margin: 20px 0;
     }
   }
 }
@@ -196,9 +198,9 @@
         text-align    : center;      /* 文字位置   */
         cursor        : pointer;     /* カーソル   */
         padding       : 5px 5px;   /* 余白       */
-        background    : #000066;     /* 背景色     */
+        background    : #03A9F4;     /* 背景色     */
         color         : #ffffff;     /* 文字色     */
-        border        : 2px solid #000066;    /* 枠の指定 */
+        border        : 2px solid #03A9F4;    /* 枠の指定 */
         width: 50px;
         margin-bottom: 5px;
       }
@@ -228,9 +230,9 @@
       text-align    : center;      /* 文字位置   */
       cursor        : pointer;     /* カーソル   */
       padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
+      background    : #03A9F4;     /* 背景色     */
       color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
+      border        : 2px solid #03A9F4;    /* 枠の指定 */
       width: 100px;
       margin: 20px;
     }
@@ -252,4 +254,35 @@
     background-size: 300px 300px;
     margin: 20px auto;
   }
+}
+
+.genre-form {
+  margin: 30px;
+  h2 {
+    border-bottom: 1px solid black;
+  }
+  #genre_name {
+    float: left;
+    width: 200px;
+    border: none;
+    margin: 20px 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background: darken(#f9f9f9, 10%);
+    color: darken(#f9f9f9, 50%);
+  }
+    .btn {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #03A9F4;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    width: 100px;
+    margin: 20px ;
+  }
+
 }

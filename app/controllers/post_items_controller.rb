@@ -28,6 +28,7 @@ class PostItemsController < ApplicationController
 
   def new
     @post_item = PostItem.new
+    @genre = Genre.new
   end
 
   def create

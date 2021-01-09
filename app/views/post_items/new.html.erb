@@ -18,14 +18,23 @@
       <p class="counter">0文字</p>
 
       <h2><%= f.label :genre_id, "カテゴリー" %></h2>
-      <%= f.collection_select :genre_id, Genre.all, :id, :name %>
+      <%= f.collection_select :genre_id, Genre.all, :id, :name %></br></br></br>
+      <p>※カテゴリーがない場合は下記より追加してください。</p>
 
-      <div class="post-btn"><%= f.submit "Post", class:"btn" %></div>
+      <%= f.submit "投稿", class:"btn" %>
     </div>
   </div>
 <% end %>
 
 <div align="right">
   <%= link_to "投稿せずに戻る", post_items_path %>
+</div>
+
+<div class="genre-form">
+  <h2>カテゴリーの登録</h2>
+  <%= form_with model:@genre, local:true do |f| %>
+  	<%= f.text_field :name %>
+  	<%= f.submit "追加する", class:"btn" %>
+  <% end %>
 </div>
 
