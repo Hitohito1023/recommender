@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     @user.post_items.delete_all
     @user.update(is_valid: false)
     reset_session
-    redirect_to root_path, notice: 'ご利用ありがとうございました'
+    redirect_to thanks_path, notice: 'ご利用ありがとうございました'
   end
 
   def thanks

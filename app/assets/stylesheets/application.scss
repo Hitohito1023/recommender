@@ -21,14 +21,14 @@
 
 html,　body {
   height: 100%;
-  // background-color: #35333e;
   font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック';
   color: black;
 }
 
-a {
-  color: #f25042
-}
+// a {
+//   color: #FFFFFF;
+// }
+
 
 #contents {
   height: 100%;
@@ -64,9 +64,9 @@ header {
   margin-right: 30px;
   li {
     margin: 0 0 0 15px;
-    color: #f25042;
+    color: #FFFFFF;
     a {
-      color: #f25042;
+      color: #FFFFFF;
     }
   }
 }
@@ -82,6 +82,9 @@ a {
 main {
   padding: 10px 100px 0 100px;
   // background-color: #99cc00;
+  h1 {
+  border-bottom: 3px solid black;
+  }
 }
 
 footer {
@@ -99,6 +102,15 @@ footer {
 //   margin: 10% auto;
 //   min-width: 9rem;
 // }
+
+.new-user {
+  border: none;
+}
+
+.login-user {
+  border: none;
+}
+
 
 .login-form {
   width: 400px;
@@ -128,10 +140,11 @@ footer {
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
     padding       : 5px 5px;   /* 余白       */
-    background    : #000066;     /* 背景色     */
+    background    : #03A9F4;     /* 背景色     */
     color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #000066;    /* 枠の指定 */
-    width: 100px;
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    width: 150px;
+    margin: 20px 130px;
   }
 }
 
@@ -164,10 +177,12 @@ footer {
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
     padding       : 5px 5px;   /* 余白       */
-    background    : #000066;     /* 背景色     */
+    background    : #03A9F4;     /* 背景色     */
     color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #000066;    /* 枠の指定 */
-    width: 100px;
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    width: 200px;
+    margin: 10px 100px;
+
   }
   img {
     border-radius: 50%;
@@ -218,7 +233,8 @@ footer {
   position: absolute;
   background-color: gray;
   width: 140px;
-  border: 1px solid black;
+  border: 6px double black;
+  z-index: 10;
   li {
     margin: 5px;
   }
@@ -253,4 +269,7 @@ footer {
       transform: scale(1.1);
     }
   }
+}
+.copy-right {
+  color: #FFFFFF;
 }

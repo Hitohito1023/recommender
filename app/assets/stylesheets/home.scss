@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.wrap {
+  margin-bottom: 50px;
+}
 
 #tab-menu {
   display: flex;
@@ -46,6 +49,7 @@
 .tab-content {
   img {
     border-radius: 2%;
+    border: 1px solid black;
   }
 }
 
@@ -54,7 +58,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-gold.jpg");
+    background-image: image-url("crown-gold.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -71,7 +75,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-silver.jpg");
+    background-image: image-url("crown-silver.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -88,7 +92,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-bronze.jpg");
+    background-image: image-url("crown-bronze.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -109,7 +113,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-gold.jpg");
+    background-image: image-url("crown-gold.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -119,7 +123,7 @@
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.5);
+    border: 1px solid black;
   }
 }
 
@@ -128,7 +132,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-silver.jpg");
+    background-image: image-url("crown-silver.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -138,7 +142,7 @@
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.5);
+    border: 1px solid black;
   }
 }
 
@@ -147,7 +151,7 @@
   border-bottom: 3px solid black;
   margin-bottom: 30px;
   p {
-    background-image: url("crown-bronze.jpg");
+    background-image: image-url("crown-bronze.jpg");
     background-size: cover;
     width: 80px;
     height: 50px;
@@ -157,7 +161,7 @@
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.5);
+    border: 1px solid black;
   }
 }
 
@@ -165,7 +169,7 @@
   margin: 30px 20px 30px 20px;
   img {
     border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.5);
+    border: 1px solid black;
   }
 }
 
@@ -197,9 +201,10 @@
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  text-align: center;
   img {
     border-radius: 2%;
-    border: 2px solid #222127;
+    border: 1px solid black;
   }
 }
 
@@ -212,13 +217,13 @@
     text-align: center;
     img {
       border-radius: 50%;
-      border: 1px solid rgba(0,0,0,0.5);
+      border: 1px solid black;
     }
   }
 }
 
 .fa-chevron-left {
-  color: #FFFFFF;
+  color: black;
   font-size: 50px;
   position: absolute;
   z-index: 100;
@@ -227,7 +232,7 @@
 }
 
 .fa-chevron-right {
-  color: #FFFFFF;
+  color: black;
   font-size: 50px;
   position: absolute;
   z-index: 100;
@@ -237,11 +242,220 @@
 
 .top-slide {
   margin-bottom: 50px;
-  h3 {
+  h2 {
     border-bottom: 2px solid black;
   }
 }
 
 #about-slide {
   margin-bottom: 50px;
+}
+
+.start {
+  margin: 20px auto;
+  height: 570px;
+}
+
+.start-1 {
+  width: 1240px;
+  text-align: center;
+  position: absolute;
+  .start-image {
+    background-image: image-url("logo.jpeg");
+    width: 500px;
+    height: 300px;
+    background-size: cover;
+    margin: 0 auto 20px;
+  }
+  h1 {
+    height: 100px;
+    margin-top: 50px;
+    border-bottom: none;
+  }
+  a {
+    margin: 30px;
+    color: #FFFFFF;
+  }
+  .btn, .btn1 {
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #03A9F4;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    // width: 180px;
+    margin: 0 30px 0 30px;
+  }
+}
+
+.start-2 {
+  width: 1240px;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  .top-image1 {
+    background-image: image-url("about1.jpeg");
+    background-size: cover;
+    width: 750px;
+    height: 500px;
+  }
+  .start-2-content {
+    width: 490px;
+    text-align: center;
+    h2 {
+      margin: 70px 0 40px 0;
+    }
+    h3 {
+      margin: 20px 0 20px 0;
+    }
+  }
+  .btn2 {
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #03A9F4;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    width: 180px;
+    margin: 0 30px 0 30px;
+    display: inline-block;
+  }
+}
+
+.start-3 {
+  width: 1240px;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  .top-image2 {
+    background-image: image-url("about2.jpeg");
+    background-size: cover;
+    width: 620px;
+    height: 500px;
+  }
+  .start-3-content {
+  width: 490px;
+  text-align: center;
+    h2 {
+      margin: 70px 0 40px 0;
+    }
+    h3 {
+      margin: 20px 0 20px 0;
+    }
+  }
+  .btn3 {
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #03A9F4;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    width: 180px;
+    margin: 0 30px 0 30px;
+    display: inline-block;
+  }
+}
+.start-4 {
+  width: 1240px;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  .top-image3 {
+    background-image: image-url("about3.jpeg");
+    background-size: cover;
+    width: 800px;
+    height: 530px;
+  }
+  .start-4-content {
+    text-align: center;
+    h2 {
+      margin: 70px 0 40px 0;
+    }
+    h3 {
+      margin: 20px 0 20px 0;
+    }
+    .btn4 {
+      border-radius : 5%;          /* 角丸       */
+      font-size     : 15px;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 5px 5px;   /* 余白       */
+      background    : #03A9F4;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      border        : 2px solid #03A9F4;    /* 枠の指定 */
+      width: 180px;
+      margin: 0 30px 0 30px;
+      display: inline-block;
+    }
+  }
+}
+
+.start-5 {
+  width: 1240px;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  .top-image4 {
+    background-image: image-url("about4.jpeg");
+    background-size: cover;
+    width: 620px;
+    height: 500px;
+  }
+  .start-5-content {
+    text-align: center;
+    width: 600px;
+    h2 {
+      margin: 70px 0 40px 0;
+    }
+    h3 {
+      margin: 20px 0 20px 0;
+    }
+    .btn5 {
+      border-radius : 5%;          /* 角丸       */
+      font-size     : 15px;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 5px 5px;   /* 余白       */
+      background    : #03A9F4;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      border        : 2px solid #03A9F4;    /* 枠の指定 */
+      width: 180px;
+      margin: 0 30px 0 30px;
+      display: inline-block;
+    }
+  }
+}
+
+
+.start-6 {
+  width: 1240px;
+  text-align: center;
+  position: absolute;
+  h1 {
+    height: 200px;
+    padding: 100px;
+    border-bottom: none;
+  }
+  a {
+    margin: 30px;
+    color: #FFFFFF;
+  }
+  .btn, .btn1 {
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #03A9F4;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    // width: 180px;
+    margin: 0 30px 0 30px;
+  }
 }

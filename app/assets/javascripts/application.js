@@ -109,10 +109,35 @@ $(document).on("turbolinks:load", function(){
 });
 
 // headerのドロップダウンメニュー
-$(document).on("turbolinks:load", function(){
+$(document).on("turbolinks:load",function(){
   $('.dropdown').hover(function() {
     $(this).find('.dropdown-menu').slideDown(true).fadeIn(500);
   },function() {
     $(this).find('.dropdown-menu').slideUp(300);
+  });
+});
+
+
+$(document).on("turbolinks:load", function(){
+  $('.section').hide();
+  $('.btn1').on('click', function() {
+    $('.start-1').fadeOut(2000);
+    $('.start-2').fadeIn(2000);
+  });
+  $('.btn2').on('click', function() {
+    $('.start-2').fadeOut(2000);
+    $('.start-3').fadeIn(2000);
+  });
+  $('.btn3').on('click', function() {
+    $('.start-3').fadeOut(2000);
+    $('.start-4').fadeIn(2000);
+  });
+    $('.btn4').on('click', function() {
+    $('.start-4').fadeOut(2000);
+    $('.start-5').fadeIn(2000);
+  });
+    $('.btn5').on('click', function() {
+    $('.start-5').fadeOut(2000);
+    $('.start-6').fadeIn(2000);
   });
 });

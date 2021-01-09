@@ -5,6 +5,7 @@
 .users-index {
   display: flex;
   flex-wrap: wrap;
+  min-height: 470px;
   .users-index-content {
     margin: 20px;
     img {
@@ -35,9 +36,9 @@
       text-align    : center;      /* 文字位置   */
       cursor        : pointer;     /* カーソル   */
       padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
+      background    : #03A9F4;     /* 背景色     */
       color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
+      border        : 2px solid #03A9F4;    /* 枠の指定 */
       width: 100px;
     }
 }
@@ -69,13 +70,17 @@
       text-align    : center;      /* 文字位置   */
       cursor        : pointer;     /* カーソル   */
       padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
+      background    : #03A9F4;     /* 背景色     */
       color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
+      border        : 2px solid #03A9F4;    /* 枠の指定 */
       width: 100px;
       margin: 15px;
     }
   }
+}
+
+.user-post {
+  border-bottom: 2px solid black;
 }
 
 .user-post-item {
@@ -96,12 +101,58 @@
 
 .unsubscribe-form {
   text-align: center;
-  h2, p {
-    margin: 10px;
+  h1 {
+    border: none;
+    margin-top: 40px;
+  }
+  .unsubscribe-image {
+    background-image: image-url("unsubscribe.jpeg");
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  .btn {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #03A9F4;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    width: 200px;
+    margin: 30px;
+  }
+  .btn-danger {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #ff7f7f;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #ff7f7f;    /* 枠の指定 */
+    width: 200px;
+    margin-bottom: 30px;
   }
 }
 
 .thanks-message {
-  margin: 20px;
+  margin: 50px;
   text-align: center;
+  height: 500px;
+  h1 {
+    border: none;
+    margin-bottom: -100px;
+  }
+  .thanks-image {
+    background-image: image-url("thanks.jpeg");
+    width: 800px;
+    height: 400px;
+    background-size: cover;
+    margin: 0 auto;
+  }
 }
