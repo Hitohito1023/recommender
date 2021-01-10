@@ -1,6 +1,15 @@
 class RelationshipsController < ApplicationController
   before_action :authenticate_user!
 
+  def followings
+    user = User.find(params[:user_id])
+    @users = user.followings.page(params[:page])
+  end
+
+  def followers
+    user = User.find(params[:user_id])
+    @users = user.followers.page(params[:page])
+  end
 
   def create
     current_user.follow(params[:user_id])
@@ -11,6 +20,5 @@ class RelationshipsController < ApplicationController
     current_user.unfollow(params[:user_id])
     redirect_to request.referer
   end
-
 
 end
