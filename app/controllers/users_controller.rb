@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     @user.post_items.delete_all
     @user.update(is_valid: false)
     reset_session
-    redirect_to thanks_path, notice: 'ご利用ありがとうございました'
+    redirect_to thanks_path, notice: 'ご利用ありがとうございました。'
   end
 
   def thanks
@@ -51,7 +51,7 @@ class UsersController < ApplicationController
   def ensure_correct_user
     @user = User.find(params[:id])
     unless @user == current_user
-      redirect_to user_path(current_user), notice: "権限がございません"
+      redirect_to user_path(current_user), alert: "権限がございません。"
     end
   end
 

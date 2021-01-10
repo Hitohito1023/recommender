@@ -75,7 +75,7 @@ class PostItemsController < ApplicationController
   def ensure_correct_user
     @post_item = PostItem.find(params[:id])
     unless @post_item.user == current_user
-      redirect_to user_path(current_user), notice: "権限がございません"
+      redirect_to user_path(current_user), alert: "権限がございません。"
     end
   end
 
