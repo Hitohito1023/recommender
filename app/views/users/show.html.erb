@@ -16,8 +16,8 @@
     </p><br>
 
     <p>
-      フォロー数: <%= @user.followings.count %>&emsp;
-      フォロワー数: <%= @user.followers.count %>
+      <%= link_to "フォロー数#{@user.followings.count}", user_followings_path(@user) %>&emsp;
+      <%= link_to "フォロワー数:#{@user.followers.count}", user_followers_path(@user) %>
     </p></br>
 
     <% if user_signed_in? %>
