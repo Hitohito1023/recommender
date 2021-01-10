@@ -73,3 +73,5 @@ gem 'rails-i18n'
 gem 'kaminari', '~> 1.2.1'
 
 gem 'rubocop', require: false
+
+gem 'rails_admin'
