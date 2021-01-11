@@ -2,7 +2,8 @@ class PostItem < ApplicationRecord
 
   validates :name, presence: true
   validates :introduction, presence: true, length: { maximum: 140 }
-
+  validates :user_id, presence: true
+  validates :genre_id, presence: true
 
   belongs_to :user
 
