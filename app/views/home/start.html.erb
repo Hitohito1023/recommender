@@ -5,8 +5,9 @@
       Recommendersへ
     </h1>
     <div class="start-image"></div>
+    <button class="btn1">Recommendersとは？</button><br><br>
     <button class="btn"><%= link_to "ログインする", new_user_session_path %></button>
-    <button class="btn1">Recommendersとは？</button>
+    <button class="btn"><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %></button>
   </div>
 
   <div class="start-2 section">
@@ -84,6 +85,7 @@
     </h1>
       <button class="btn"><%= link_to '新規登録', new_user_registration_path %></button>
       <button class="btn"><%= link_to '登録せずに閲覧する', home_top_path %></button>
+      <button class="btn"><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %></button>
   </div>
 </div>
 

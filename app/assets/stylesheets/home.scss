@@ -269,14 +269,14 @@
   }
   h1 {
     height: 100px;
-    margin-top: 50px;
+    margin-top: 20px;
     border-bottom: none;
   }
   a {
     margin: 30px;
     color: #FFFFFF;
   }
-  .btn, .btn1 {
+  .btn {
     border-radius : 5%;          /* 角丸       */
     font-size     : 15px;        /* 文字サイズ */
     text-align    : center;      /* 文字位置   */
@@ -285,7 +285,19 @@
     background    : #03A9F4;     /* 背景色     */
     color         : #ffffff;     /* 文字色     */
     border        : 2px solid #03A9F4;    /* 枠の指定 */
-    // width: 180px;
+    margin: 0 15px 0 15px;
+  }
+  .btn1 {
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #8cd460;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #8cd460;    /* 枠の指定 */
+    width: 370px;
+    height: 50px;
     margin: 0 30px 0 30px;
   }
 }

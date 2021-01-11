@@ -15,6 +15,12 @@ class Users::SessionsController < Devise::SessionsController
     end
   end
 
+  def new_guest
+    user = User.guest
+    sign_in user
+    redirect_to user_path(user), notice: 'ゲストユーザーとしてログインしました。'
+  end
+
 
   # GET /resource/sign_in
   # def new
