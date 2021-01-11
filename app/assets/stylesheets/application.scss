@@ -273,3 +273,36 @@ footer {
 .copy-right {
   color: #FFFFFF;
 }
+
+.password_reset {
+  border: none;
+}
+
+
+.reset-form {
+  width: 400px;
+  margin: 0 auto;
+  height: 560px;
+  #user_email {
+    width: 370px;
+    border: none;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background: darken(#f9f9f9, 10%);
+    color: darken(#f9f9f9, 50%);
+  }
+  .btn {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 15px;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 5px 5px;   /* 余白       */
+    background    : #03A9F4;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    width: 200px;
+    margin: 20px 110px;
+  }
+}
