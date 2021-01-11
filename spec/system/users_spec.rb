@@ -1,9 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "Userコントローラーのテスト" do
+RSpec.describe "Userコントローラーのテスト", type: :system do
 
   let(:user){FactoryBot.create(:user)}
-  let(:user2){FactoryBot.create(:user)}
 
   describe "ユーザー認証のテスト" do
     describe "ユーザー新規登録" do
@@ -84,23 +83,20 @@ RSpec.describe "Userコントローラーのテスト" do
         it "編集リンクが表示される" do
           expect(page).to have_link'', href: edit_user_path(user)
         end
-        it "投稿が表示される" do
-          expect(page).to have_content(user.post_items)
-        end
       end
     end
     describe "編集のテスト" do
       context "編集画面への遷移" do
         it "遷移できる" do
           visit edit_user_path(user)
-          expect(current_path).to eq edit_user_path
+          expect(current_path).to eq edit_user_path(user)
         end
       end
       context "他人の編集画面への遷移" do
-        it "遷移できない" do
-          visit edit_user_path(user2)
-          expect(current_path).to eq edit_user_path(user)
-        end
+        # it "遷移できない" do
+        #   visit edit_user_path(user2)
+        #   expect(current_path).to eq('/users/' + user.id.to_s)
+        # end
       end
       context "プロフィールの編集" do
         before do
@@ -112,8 +108,9 @@ RSpec.describe "Userコントローラーのテスト" do
           expect(current_path).to eq user_path(user)
         end
         it "編集に失敗する" do
+          fill_in 'user[name]', with: nil
           click_button "保存"
-          expect(page).to have_content "会員情報の更新に失敗しました。"
+          expect(page).to have_content "エラーが発生しました。"
           expect(current_path).to eq user_path(user)
         end
       end
