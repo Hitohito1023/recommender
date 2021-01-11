@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "PostItemモデルのテスト", type: :model do
 
-  describe "ヴァリデーションのテスト" do
+  describe "バリデーションのテスト" do
     it "名前がない場合、無効である" do
       post_item = FactoryBot.build(:post_item, name: nil)
       post_item.valid?

@@ -6,6 +6,7 @@ ja:
         email: "メールアドレス"
         encrypted_password: "パスワード"
         password: "パスワード(確認用)"
+        introduction: "自己紹介"
       post_item:
         name: "タイトル"
         introduction: "紹介文"
