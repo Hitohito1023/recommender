@@ -2,10 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// search/search------------------------------------------------------------
+.search-index {
+  min-height: 600px;
+}
+
+// search/_search_form------------------------------------------------------------
 .search-form {
   text-align: right;
 }
 
+// post_items/_search_index-----------------------------------------------------------
 .search-item-content {
   width: 1100px;
   min-height: 580px;
@@ -24,6 +31,7 @@
   }
 }
 
+// users/_search_index-----------------------------------------------------------
 .search-user-content {
   display: flex;
   flex-wrap: wrap;
@@ -40,6 +48,3 @@
   }
 }
 
-.search-index {
-  min-height: 600px;
-}

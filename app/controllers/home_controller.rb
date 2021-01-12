@@ -9,7 +9,7 @@ class HomeController < ApplicationController
     @users = User.order("RANDOM()").limit(10) #userをランダムで取得
   end
 
-  def ranking　#aとbに値を入れて比べて並べる
+  def ranking
     @post_items = PostItem.includes(:favorited_users).sort { |a, b| b.favorited_users.size <=> a.favorited_users.size }
     @users = User.includes(:post_items).sort { |a, b| b.post_items.size <=> a.post_items.size }
     @user_followers = User.includes(:followers).sort { |a, b| b.followers.size <=> a.followers.size }
