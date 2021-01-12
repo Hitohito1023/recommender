@@ -63,7 +63,7 @@
 	<% if user_signed_in? %>
 		<%= form_with model:[@post_item, @post_comment], remote: true do |f| %>
 	  <div class="comment-form">
-	  	<%= f.text_area :comment, size:"60x5", placeholder: "コメントをここに" %>
+	  	<%= f.text_area :comment, size:"60x5", placeholder: "コメントをここに。100文字までコメントが可能です。" %>
 	  	<div align="right"><%= f.submit "コメント", class:"btn" %></div>
 	  </div>
 		<% end %>

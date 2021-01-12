@@ -34,7 +34,8 @@ class UsersController < ApplicationController
   def withdraw
     @user = User.find(current_user.id)
     @user.post_items.delete_all
-    @user.update(is_valid: false)
+    @user.post_comments.delete_all
+    @user.update(is_valid: "無効")
     reset_session
     redirect_to thanks_path, notice: 'ご利用ありがとうございました。'
   end

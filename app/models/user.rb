@@ -21,6 +21,12 @@ class User < ApplicationRecord
 
   scope :only_valid, -> { where(is_valid: true) }
 
+  enum is_valid: {"有効": true, "無効": false}
+
+  def active_for_authentication?
+    super && (self.is_valid === "有効")
+  end
+
   def self.search_for(content, method)
     User.where('name LIKE ?', '%' + content + '%')
   end

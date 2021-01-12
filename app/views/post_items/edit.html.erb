@@ -10,10 +10,10 @@
     </div>
 
     <div class="post-item-edit-form">
-      <h2><%= f.label :name %></h2>
+      <h2><%= f.label :name, "タイトル" %></h2>
       <%= f.text_field :name %>
 
-      <h2><%= f.label :introduction %></h2>
+      <h2><%= f.label :introduction, "紹介文(140文字まで)" %></h2>
       <%= f.text_area :introduction, class: 'js-text', size: "50x15" %>
       <p class="counter">0文字</p>
 
