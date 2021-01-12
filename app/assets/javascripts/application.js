@@ -32,13 +32,13 @@ $(document).on('turbolinks:load', function () {
 $(document).on('turbolinks:load',function () {
   $("#slide-image").skippr({
     transition : 'slide',
-    speed : 1000,
+    speed : 2000,
     easing : 'easeOutQuart',
     navType : 'block',
     childrenElementType : 'div',
     arrows : true,
     autoPlay : true,
-    autoPlayDuration : 3000,
+    autoPlayDuration : 2000,
     keyboardOnAlways : true,
     hidePrevious : false
   });

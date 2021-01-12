@@ -173,27 +173,32 @@
   }
 }
 
-#about-slide {
-  height: 500px;
+#top-slide {
+  height: 200px;
+  width: 1240px;
+  margin: 20px auto;
   .image1 {
-    background-image: image-url("test1.jpg");
-    background-size: cover;
-    height: 500px;
+    background-image: image-url("top1.jpg");
+    background-size: 1240px 200px;
+    height: 200px;
   }
   .image2 {
-    background-image: image-url("test2.jpg");
-    background-size: cover;
-    height: 500px;
+    background-image: image-url("top2.jpg");
+    background-size: 1240px 200px;
+    height: 200px;
   }
   .image3 {
-    background-image: image-url("test3.jpg");
-    background-size: cover;
-    height: 500px;
+    background-image: image-url("top3.jpg");
+    background-size: 1240px 200px;
+    height: 200px;
   }
-  .image4 {
-    background-image: image-url("test4.jpg");
-    background-size: cover;
-    height: 500px;
+  .skippr-previous {
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+  }
+  .skippr-next {
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
   }
 }
 
