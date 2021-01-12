@@ -1,7 +1,6 @@
 class FavoritesController < ApplicationController
   before_action :authenticate_user!
 
-
   def create
     @post_item = PostItem.find(params[:post_item_id])
     favorite = @post_item.favorites.new(user_id: current_user.id)

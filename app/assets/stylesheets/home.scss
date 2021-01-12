@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// homes/ranking------------------------------------------------------------
 .wrap {
   margin-bottom: 50px;
 }
@@ -202,6 +203,7 @@
   }
 }
 
+// homes/top------------------------------------------------------------
 .recommend-items {
   display: flex;
   width: 1200px;
@@ -252,6 +254,7 @@
   }
 }
 
+// homes/start------------------------------------------------------------
 #about-slide {
   margin-bottom: 50px;
 }
@@ -282,25 +285,25 @@
     color: #FFFFFF;
   }
   .btn {
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #03A9F4;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #03A9F4;
+    color         : #ffffff;
+    border        : 2px solid #03A9F4;
     margin: 0 15px 0 15px;
   }
   .btn1 {
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #8cd460;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #8cd460;    /* 枠の指定 */
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #8cd460;
+    color         : #ffffff;
+    border        : 2px solid #8cd460;
     width: 370px;
     height: 50px;
     margin: 0 30px 0 30px;
@@ -313,7 +316,7 @@
   position: absolute;
   display: flex;
   .top-image1 {
-    background-image: image-url("about1.jpeg");
+    background-image: image-url("start1.jpeg");
     background-size: cover;
     width: 750px;
     height: 500px;
@@ -329,14 +332,14 @@
     }
   }
   .btn2 {
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #03A9F4;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #03A9F4;
+    color         : #ffffff;
+    border        : 2px solid #03A9F4;
     width: 180px;
     margin: 0 30px 0 30px;
     display: inline-block;
@@ -349,7 +352,7 @@
   position: absolute;
   display: flex;
   .top-image2 {
-    background-image: image-url("about2.jpeg");
+    background-image: image-url("start2.jpeg");
     background-size: cover;
     width: 620px;
     height: 500px;
@@ -365,14 +368,14 @@
     }
   }
   .btn3 {
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #03A9F4;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #03A9F4;
+    color         : #ffffff;
+    border        : 2px solid #03A9F4;
     width: 180px;
     margin: 0 30px 0 30px;
     display: inline-block;
@@ -384,7 +387,7 @@
   position: absolute;
   display: flex;
   .top-image3 {
-    background-image: image-url("about3.jpeg");
+    background-image: image-url("start3.jpeg");
     background-size: cover;
     width: 800px;
     height: 530px;
@@ -398,14 +401,14 @@
       margin: 20px 0 20px 0;
     }
     .btn4 {
-      border-radius : 5%;          /* 角丸       */
-      font-size     : 15px;        /* 文字サイズ */
-      text-align    : center;      /* 文字位置   */
-      cursor        : pointer;     /* カーソル   */
-      padding       : 5px 5px;   /* 余白       */
-      background    : #03A9F4;     /* 背景色     */
-      color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #03A9F4;    /* 枠の指定 */
+      border-radius : 5%;
+      font-size     : 15px;
+      text-align    : center;
+      cursor        : pointer;
+      padding       : 5px 5px;
+      background    : #03A9F4;
+      color         : #ffffff;
+      border        : 2px solid #03A9F4;
       width: 180px;
       margin: 0 30px 0 30px;
       display: inline-block;
@@ -419,7 +422,7 @@
   position: absolute;
   display: flex;
   .top-image4 {
-    background-image: image-url("about4.jpeg");
+    background-image: image-url("start4.jpeg");
     background-size: cover;
     width: 620px;
     height: 500px;
@@ -434,21 +437,20 @@
       margin: 20px 0 20px 0;
     }
     .btn5 {
-      border-radius : 5%;          /* 角丸       */
-      font-size     : 15px;        /* 文字サイズ */
-      text-align    : center;      /* 文字位置   */
-      cursor        : pointer;     /* カーソル   */
-      padding       : 5px 5px;   /* 余白       */
-      background    : #03A9F4;     /* 背景色     */
-      color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #03A9F4;    /* 枠の指定 */
+      border-radius : 5%;
+      font-size     : 15px;
+      text-align    : center;
+      cursor        : pointer;
+      padding       : 5px 5px;
+      background    : #03A9F4;
+      color         : #ffffff;
+      border        : 2px solid #03A9F4;
       width: 180px;
       margin: 0 30px 0 30px;
       display: inline-block;
     }
   }
 }
-
 
 .start-6 {
   width: 1240px;
@@ -464,15 +466,14 @@
     color: #FFFFFF;
   }
   .btn, .btn1 {
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #03A9F4;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #03A9F4;    /* 枠の指定 */
-    // width: 180px;
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #03A9F4;
+    color         : #ffffff;
+    border        : 2px solid #03A9F4;
     margin: 0 30px 0 30px;
   }
 }
