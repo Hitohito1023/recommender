@@ -1,4 +1,6 @@
 class PostCommentsController < ApplicationController
+  before_action :authenticate_user!
+
 
   def create
     @post_item = PostItem.find(params[:post_item_id])
@@ -25,4 +27,3 @@ class PostCommentsController < ApplicationController
   end
 
 end
-

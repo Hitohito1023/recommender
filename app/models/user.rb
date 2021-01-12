@@ -1,6 +1,10 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
+  validates :name, presence: true, uniqueness: true
+  validates :email, presence: true
+  validates :encrypted_password, presence: true
+  validates :introduction, length: { maximum: 100 }
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -17,8 +21,14 @@ class User < ApplicationRecord
 
   scope :only_valid, -> { where(is_valid: true) }
 
+  enum is_valid: {"有効": true, "無効": false}
+
+  def active_for_authentication?
+    super && (self.is_valid === "有効")
+  end
+
   def self.search_for(content, method)
-    User.where('name LIKE ?', '%'+content+'%')
+    User.where('name LIKE ?', '%' + content + '%')
   end
 
   def follow(user_id)
@@ -31,6 +41,13 @@ class User < ApplicationRecord
 
   def following?(user)
     followings.include?(user)
+  end
+
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.name = 'ゲスト'
+    end
   end
 
 

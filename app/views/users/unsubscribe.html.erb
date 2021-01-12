@@ -1,10 +1,11 @@
 <div class="unsubscribe-form">
-  <h2>本当に退会しますか？</h2>
+  <h1>本当に退会しますか？</h1>
   <div>
     <p>退会する場合は、『退会する』をクリックしてください。</p>
   </div>
+  <div class="unsubscribe-image"></div>
   <div>
-    <p><%= link_to '退会しない', user_path(current_user) %></p>
-    <p><%= link_to "退会する", users_withdraw_path(current_user), method: :patch %></p>
+    <%= link_to '退会しない', user_path(@user), class:"btn" %>
+    <%= link_to "退会する", users_withdraw_path(@user), method: :patch, class:"btn-danger" %>
   </div>
 </div>

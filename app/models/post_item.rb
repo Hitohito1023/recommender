@@ -1,5 +1,10 @@
 class PostItem < ApplicationRecord
 
+  validates :name, presence: true
+  validates :introduction, presence: true, length: { maximum: 140 }
+  validates :user_id, presence: true
+  validates :genre_id, presence: true
+
   belongs_to :user
 
   attachment :image
@@ -14,7 +19,7 @@ class PostItem < ApplicationRecord
   end
 
   def self.search_for(content, method)
-    PostItem.where('name LIKE ?', '%'+content+'%')
+    PostItem.where('name LIKE ?', '%' + content + '%')
   end
 
 end

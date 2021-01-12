@@ -1,7 +1,8 @@
-<h1 align="center">ログイン</h1>
+<h1 class="login-user" align="center">ログイン</h1>
 
 <div class="login-form">
 <%= form_with model:@user, url: session_path(resource_name), local: true do |f| %>
+
   <div class="field">
     <%= f.label :email, "メールアドレス" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -20,10 +21,11 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in", class:"btn" %>
-  </div>
+    <%= f.submit "ログイン", class:"btn" %>
+  </div></br>
 <% end %>
   <div>
     <%= render "devise/shared/links" %>
+    <%= link_to 'ゲストログインはこちら', users_guest_sign_in_path, method: :post %>
   </div>
 </div>

@@ -3,13 +3,13 @@ class UsersController < ApplicationController
   before_action :ensure_correct_user, only: [:edit, :update, :unsubscribe, :withdraw]
 
   def index
-    @users = User.only_valid
+    @users = User.only_valid.page(params[:page]).reverse_order
   end
 
   def show
     @user = User.find(params[:id])
     @favorites_count = 0
-    @user.post_items.each do |post_item|
+    @user.post_items.each do |post_item|　　#pointの総取得数
       @favorites_count += post_item.favorites.count
     end
   end
@@ -23,10 +23,9 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to user_path(@user), notice: '会員情報の更新が完了しました。'
     else
-      render :edit
+      render :edit, alert: '会員情報の更新に失敗しました。'
     end
   end
-
 
   def unsubscribe
     @user = current_user
@@ -35,9 +34,10 @@ class UsersController < ApplicationController
   def withdraw
     @user = User.find(current_user.id)
     @user.post_items.delete_all
-    @user.update(is_valid: false)
+    @user.post_comments.delete_all
+    @user.update(is_valid: "無効")
     reset_session
-    redirect_to root_path
+    redirect_to thanks_path, notice: 'ご利用ありがとうございました。'
   end
 
   def thanks
@@ -52,7 +52,7 @@ class UsersController < ApplicationController
   def ensure_correct_user
     @user = User.find(params[:id])
     unless @user == current_user
-      redirect_to user_path(current_user)
+      redirect_to user_path(current_user), alert: "権限がございません。"
     end
   end
 

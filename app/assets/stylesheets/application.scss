@@ -19,24 +19,34 @@
   padding: 0;
 }
 
+// body--------------------------------------------------------------
 html,　body {
   height: 100%;
-  // background-color: black;
+  font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック';
+  color: black;
 }
 
+#contents {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+// header------------------------------------------------------------
 header {
   display: flex;
   width: 100%;
   height: 70px;
-  background-color: darkgrey;
+  background-color: #222127;
   align-items: center;
-  // position: fixed;
   top: 0;
-  // padding: 0 10px 0 50px;
 }
 
 .header-title {
   margin-left: 30px;
+  padding-top: 10px;
   a {
     height: 70px;
     img {
@@ -46,7 +56,6 @@ header {
   }
 }
 
-
 .header-item {
   list-style: none;
   display: flex;
@@ -54,6 +63,10 @@ header {
   margin-right: 30px;
   li {
     margin: 0 0 0 15px;
+    color: #FFFFFF;
+    a {
+      color: #FFFFFF;
+    }
   }
 }
 
@@ -61,35 +74,40 @@ header {
   margin: 0 0 0 auto;
 }
 
-a {
-  text-decoration: none;
-  color: #4b4b4b;
+.dropdown-menu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  background-color: gray;
+  width: 140px;
+  border: 6px double black;
+  z-index: 10;
+  li {
+    margin: 5px;
+  }
 }
 
+// main----------------------------------------------------------
 main {
   padding: 10px 100px 0 100px;
-  background-color: #99cc00;
+  h1 {
+    border-bottom: 3px solid black;
+  }
 }
 
-footer {
-  width: 100%;
-  text-align: center;
-  padding: 50px 0;
-  background-color: #cab64a;
-  height: 10px;
-  // position: absolute;
-  bottom: 0;
+// devise---------------------------------------------------------
+.new-user {
+  border: none;
 }
 
-// form {
-//   width: 50%;
-//   margin: 10% auto;
-//   min-width: 9rem;
-// }
+.login-user {
+  border: none;
+}
 
 .login-form {
   width: 400px;
   margin: 0 auto;
+  height: 560px;
   #user_email, #user_password {
     width: 370px;
     border: none;
@@ -109,15 +127,16 @@ footer {
   }
   .btn {
     display       : inline-block;
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #000066;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #000066;    /* 枠の指定 */
-    width: 100px;
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #03A9F4;
+    color         : #ffffff;
+    border        : 2px solid #03A9F4;
+    width: 150px;
+    margin: 20px 130px;
   }
 }
 
@@ -145,15 +164,16 @@ footer {
   }
   .btn {
     display       : inline-block;
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #000066;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #000066;    /* 枠の指定 */
-    width: 100px;
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #03A9F4;
+    color         : #ffffff;
+    border        : 2px solid #03A9F4;
+    width: 200px;
+    margin: 10px 100px;
   }
   img {
     border-radius: 50%;
@@ -161,10 +181,96 @@ footer {
   }
 }
 
-.top-img {
+.password_reset {
+  border: none;
+}
+
+.reset-form {
+  width: 400px;
+  margin: 0 auto;
+  height: 560px;
+  #user_email {
+    width: 370px;
+    border: none;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background: darken(#f9f9f9, 10%);
+    color: darken(#f9f9f9, 50%);
+  }
+  .btn {
+    display       : inline-block;
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #03A9F4;
+    color         : #ffffff;
+    border        : 2px solid #03A9F4;
+    width: 200px;
+    margin: 20px 110px;
+  }
+}
+
+// footer--------------------------------------------------------------
+footer {
   width: 100%;
-  img {
-    width: 100%;
-    height: 500px
+  text-align: center;
+  padding: 30px 0;
+  background-color: #222127;
+  height: 100%;
+}
+
+.copy-right {
+  color: #FFFFFF;
+}
+
+// flash_message---------------------------------------------------------
+.alert {
+	text-align: center;
+}
+.alert-info {
+    background-color: #bde9ff;
+    border-color: #bde9ff;
+    color: #4c6977;
+}
+
+.alert-danger {
+    background-color: #f3c0c0;
+    border-color: #f3c0c0;
+    color: #3e3a3a;
+}
+
+#error_explanation {
+    color:#262626;
+    background:#FFEBE8;
+    text-align: center;
+    border: 2px solid #990000;
+    padding: 12px;
+    font-weight: 850;
+    width: 350px;
+    margin: 0 auto;
+    li {
+      list-style: none;
+      text-align: left;
+    }
+  }
+
+// pagination-----------------------------------------------------------
+.paginate {
+  margin: 30px auto;
+  .pagination{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+     span{
+      background-color: rgba(158, 158, 158, 0.4);
+      text-align: center;
+      width: 50px;
+      border: solid 1px #344963;
+      color: rgb(197, 20, 159);
+    }
   }
 }

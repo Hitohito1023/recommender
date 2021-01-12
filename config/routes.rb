@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  root 'home#top'
-  get 'home/about' => 'home#about'
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#new_guest'
+  end
+  root 'home#start'
+  get 'home/top' => 'home#top'
   get 'home/ranking' => 'home#ranking'
 
   get 'search/search'
@@ -11,11 +15,14 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :edit, :update] do
     resource :relationships, only: [:create, :destroy]
+    get 'followings' => 'relationships#followings', as: 'followings'
+    get 'followers' => 'relationships#followers', as: 'followers'
   end
 
   get 'users/:id/unsubscribe' => 'users#unsubscribe', as: 'users_unsubscribe'
-  get 'users/thanks' => 'users#thanks', as: 'users_thanks'
   patch 'users/:id/withdraw' => 'users#withdraw', as: 'users_withdraw'
+  put 'users/:id/withdraw' => 'users#withdraw'
+  get '/thanks' => 'users#thanks', as: 'thanks'
 
 
   resources :post_items do
@@ -23,8 +30,5 @@ Rails.application.routes.draw do
     resources :post_comments, only: [:create, :destroy]
   end
 
-  resources :genres, only: [:index, :new, :create, :detroy]
+  resources :genres, only: [:index, :new, :edit, :create, :update, :destroy]
 end
-
-
-

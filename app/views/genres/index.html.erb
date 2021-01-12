@@ -1,7 +1,25 @@
 <h1>ジャンル一覧</h1>
 
 <div>
-  <% @genres.each do |genre| %>
-		<%= genre.name %>
-  <% end %>
+  <table>
+    <th>
+      <tr>
+        <td>ジャンル名</td>
+        <td></td>
+      </tr>
+    </th>
+    <tbody>
+      <% @genres.each do |genre| %>
+      <tr>
+        <td>
+          <%= genre.name %>
+        </td>
+        <td>
+          <%= link_to "Edit", edit_genre_path(genre) %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
+

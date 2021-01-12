@@ -2,36 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// post_items/index-----------------------------------------------------------
 .post-btn {
-  border-radius : 5%;          /* 角丸       */
-  font-size     : 15px;        /* 文字サイズ */
-  text-align    : center;      /* 文字位置   */
-  cursor        : pointer;     /* カーソル   */
-  padding       : 5px 5px;   /* 余白       */
-  background    : #000066;     /* 背景色     */
-  color         : #ffffff;     /* 文字色     */
-  border        : 2px solid #000066;    /* 枠の指定 */
+  border-radius : 5%;
+  font-size     : 15px;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 5px 5px;
+  background    : #03A9F4;
+  color         : #ffffff;
+  border        : 2px solid #03A9F4;
   width: 100px;
-  margin: 0 0 0 auto;
+  margin: 20px 0 0 auto;
   a {
     color: #FFFFFF;
   }
 }
 
-
-
 .post-item-index {
   display: flex;
   padding-bottom: 50px;
+  min-height: 505px;
   .genre-sidebar {
+    background-color: gray;
     width: 160px;
     height: max-content;
     padding: 10px 0 0;
     text-align: center;
-    border: 4px double #fee;
+    border: 6px double black;
     margin: 35px 20px 0 0;
     a {
       display: block;
+      color: #FFFFFF;
+    }
+    h3 {
+      border-bottom: 2px solid black;
     }
   }
   .post-item-content {
@@ -40,22 +45,29 @@
       display: flex;
       flex-wrap: wrap;
       margin-left: 50px;
+      img {
+        border-radius: 2%;
+        border: 1px solid black;
+      }
       a {
         margin: 20px 30px 0 0;
         text-align: center;
+      }
+      h3 {
+        margin: 100px auto;
       }
     }
   }
 }
 
-
-
-
-
-
+// post_items/show-----------------------------------------------------------
 .post-item-show {
   display: flex;
   padding: 40px 40px 40px 100px;
+  img {
+    border-radius: 2%;
+    border: 1px solid black;
+  }
   .post-item-recommend {
     margin-left: 50px;
     a {
@@ -63,14 +75,26 @@
     }
     .btn {
       display       : inline-block;
-      border-radius : 5%;          /* 角丸       */
-      font-size     : 15px;        /* 文字サイズ */
-      text-align    : center;      /* 文字位置   */
-      cursor        : pointer;     /* カーソル   */
-      padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
-      color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
+      border-radius : 5%;
+      font-size     : 15px;
+      text-align    : center;
+      cursor        : pointer;
+      padding       : 5px 5px;
+      background    : #03A9F4;
+      color         : #ffffff;
+      border        : 2px solid #03A9F4;
+      width: 100px;
+    }
+    .btn-danger {
+      display       : inline-block;
+      border-radius : 5%;
+      font-size     : 15px;
+      text-align    : center;
+      cursor        : pointer;
+      padding       : 5px 5px;
+      background    : #ff7f7f;
+      color         : #ffffff;
+      border        : 2px solid #ff7f7f;
       width: 100px;
     }
     .post-item-icons {
@@ -80,9 +104,77 @@
   }
 }
 
+.comment-title {
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.post-comment {
+  display: flex;
+  margin-bottom: 30px;
+  ol {
+    width: 600px;
+    word-wrap: break-word;
+    list-style-type: none;
+    li {
+      border-bottom: solid 1px #000000;
+      margin-bottom: 10px;
+      .btn-danger {
+        display       : inline-block;
+        border-radius : 5%;
+        font-size     : 10px;
+        text-align    : center;
+        cursor        : pointer;
+        padding       : 5px 5px;
+        background    : #ff7f7f;
+        color         : #ffffff;
+        border        : 2px solid #ff7f7f;
+        width: 50px;
+        margin-bottom: 5px;
+      }
+      img {
+        border-radius: 50%;
+        border: 1px solid black;
+      }
+    }
+  }
+  .comment-form {
+    margin-left: 100px;
+    textarea {
+      float: left;
+      width: 100%;
+      max-width: 100%;
+      border: none;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      background: darken(#f9f9f9, 10%);
+      color: darken(#f9f9f9, 50%);
+    }
+    .btn {
+      display       : inline-block;
+      border-radius : 5%;
+      font-size     : 15px;
+      text-align    : center;
+      cursor        : pointer;
+      padding       : 5px 5px;
+      background    : #03A9F4;
+      color         : #ffffff;
+      border        : 2px solid #03A9F4;
+      width: 100px;
+      margin: 20px;
+    }
+  }
+}
+
+// post_items/edit-----------------------------------------------------------
 .post-item-edit {
   display: flex;
   padding: 40px 40px 40px 100px;
+  img {
+    border-radius: 2%;
+    border: 1px solid black;
+  }
   .post-item-edit-form {
     margin-left: 60px;
     #post_item_name, textarea, select {
@@ -104,22 +196,27 @@
     }
     .btn {
       display       : inline-block;
-      border-radius : 5%;          /* 角丸       */
-      font-size     : 15px;        /* 文字サイズ */
-      text-align    : center;      /* 文字位置   */
-      cursor        : pointer;     /* カーソル   */
-      padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
-      color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
+      border-radius : 5%;
+      font-size     : 15px;
+      text-align    : center;
+      cursor        : pointer;
+      padding       : 5px 5px;
+      background    : #03A9F4;
+      color         : #ffffff;
+      border        : 2px solid #03A9F4;
       width: 100px;
     }
   }
 }
 
+// post_items/new-----------------------------------------------------------
 .post-item-new {
   display: flex;
   padding: 40px 40px 40px 100px;
+  img {
+    border-radius: 2%;
+    border: 1px solid black;
+  }
   .post-item-new-form {
     margin-left: 60px;
     #post_item_name, textarea, select {
@@ -136,83 +233,62 @@
     select {
       width: 200px;
     }
-    .post-btn {
-      margin: 80px 0;
-    }
     .btn {
       display       : inline-block;
-      border-radius : 5%;          /* 角丸       */
-      font-size     : 15px;        /* 文字サイズ */
-      text-align    : center;      /* 文字位置   */
-      cursor        : pointer;     /* カーソル   */
-      padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
-      color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
-      width: 100px;
+      border-radius : 5%;
+      font-size     : 15px;
+      text-align    : center;
+      cursor        : pointer;
+      padding       : 5px 5px;
+      background    : #03A9F4;
+      color         : #ffffff;
+      border        : 2px solid #03A9F4;
+      width: 150px;
+      margin: 20px 0;
     }
   }
 }
 
-
-.post-comment {
-  display: flex;
-  margin-bottom: 30px;
-  ol {
-    width: 600px;
-    word-wrap: break-word;
-    list-style-type: none;
-    li {
-      border-bottom: solid 2px #000000;
-      margin-bottom: 10px;
-      .btn {
-        display       : inline-block;
-        border-radius : 5%;          /* 角丸       */
-        font-size     : 10px;        /* 文字サイズ */
-        text-align    : center;      /* 文字位置   */
-        cursor        : pointer;     /* カーソル   */
-        padding       : 5px 5px;   /* 余白       */
-        background    : #000066;     /* 背景色     */
-        color         : #ffffff;     /* 文字色     */
-        border        : 2px solid #000066;    /* 枠の指定 */
-        width: 50px;
-        margin-bottom: 5px;
-      }
-      img {
-        border-radius: 50%;
-        border: 1px solid rgba(0,0,0,0.5);
-      }
-    }
+.genre-form {
+  margin: 30px;
+  h2 {
+    border-bottom: 1px solid black;
   }
-  .comment-form {
-    margin-left: 100px;
-    textarea {
-      float: left;
-      width: 100%;
-      max-width: 100%;
-      border: none;
-      margin: 0.5rem 0;
-      padding: 0.5rem 1rem;
-      border-radius: 0.3rem;
-      background: darken(#f9f9f9, 10%);
-      color: darken(#f9f9f9, 50%);
-    }
+  #genre_name {
+    float: left;
+    width: 200px;
+    border: none;
+    margin: 20px 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background: darken(#f9f9f9, 10%);
+    color: darken(#f9f9f9, 50%);
+  }
     .btn {
-      display       : inline-block;
-      border-radius : 5%;          /* 角丸       */
-      font-size     : 15px;        /* 文字サイズ */
-      text-align    : center;      /* 文字位置   */
-      cursor        : pointer;     /* カーソル   */
-      padding       : 5px 5px;   /* 余白       */
-      background    : #000066;     /* 背景色     */
-      color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #000066;    /* 枠の指定 */
-      width: 100px;
-      margin: 20px;
-    }
+    display       : inline-block;
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #03A9F4;
+    color         : #ffffff;
+    border        : 2px solid #03A9F4;
+    width: 100px;
+    margin: 20px ;
   }
 }
 
-.comment-title {
-  margin-bottom: 20px;
+// post_items/complete-----------------------------------------------------------
+.complete {
+  height: 400px;
+  margin: 100px;
+  text-align: center;
+  .complete-image {
+    background-image: image-url("complete.jpeg");
+    height: 300px;
+    width: 300px;
+    background-size: 300px 300px;
+    margin: 20px auto;
+  }
 }
