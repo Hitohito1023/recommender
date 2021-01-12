@@ -4,9 +4,9 @@ class HomeController < ApplicationController
   end
 
   def top
-    @post_items = PostItem.order("RANDOM()").limit(10)
-    @new_post_items = PostItem.order("id DESC").limit(10)
-    @users = User.order("RANDOM()").limit(10)
+    @post_items = PostItem.order("RANDOM()").limit(10) #post_itemをランダムで取得
+    @new_post_items = PostItem.order("id DESC").limit(10) #post_itemを新しい順に取得
+    @users = User.order("RANDOM()").limit(10) #userをランダムで取得
   end
 
   def ranking

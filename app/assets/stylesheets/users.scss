@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// users/index------------------------------------------------------------
 .users-index {
   display: flex;
   flex-wrap: wrap;
@@ -18,6 +19,7 @@
   }
 }
 
+// users/show------------------------------------------------------------
 .user-show {
   display: flex;
   padding: 40px 40px 40px 100px;
@@ -29,53 +31,17 @@
     margin-left: 60px;
     width: 500px;
   }
-    .btn {
-      display       : inline-block;
-      border-radius : 5%;          /* 角丸       */
-      font-size     : 15px;        /* 文字サイズ */
-      text-align    : center;      /* 文字位置   */
-      cursor        : pointer;     /* カーソル   */
-      padding       : 5px 5px;   /* 余白       */
-      background    : #03A9F4;     /* 背景色     */
-      color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #03A9F4;    /* 枠の指定 */
-      width: 100px;
-    }
-}
-
-.user-edit {
-  display: flex;
-  padding: 40px 40px 40px 100px;
-  img {
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.5);
-  }
-  .user-edit-form {
-    margin-left: 60px;
-    #user_name, #user_email, textarea {
-      float: left;
-      width: 100%;
-      max-width: 100%;
-      border: none;
-      margin: 0.5rem 0;
-      padding: 0.5rem 1rem;
-      border-radius: 0.3rem;
-      background: darken(#f9f9f9, 10%);
-      color: darken(#f9f9f9, 50%);
-    }
-    .btn {
-      display       : inline-block;
-      border-radius : 5%;          /* 角丸       */
-      font-size     : 15px;        /* 文字サイズ */
-      text-align    : center;      /* 文字位置   */
-      cursor        : pointer;     /* カーソル   */
-      padding       : 5px 5px;   /* 余白       */
-      background    : #03A9F4;     /* 背景色     */
-      color         : #ffffff;     /* 文字色     */
-      border        : 2px solid #03A9F4;    /* 枠の指定 */
-      width: 100px;
-      margin: 15px;
-    }
+  .btn {
+    display       : inline-block;
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #03A9F4;
+    color         : #ffffff;
+    border        : 2px solid #03A9F4;
+    width: 100px;
   }
 }
 
@@ -99,6 +65,44 @@
   }
 }
 
+// users/edit------------------------------------------------------------
+.user-edit {
+  display: flex;
+  padding: 40px 40px 40px 100px;
+  img {
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.5);
+  }
+  .user-edit-form {
+    margin-left: 60px;
+    #user_name, #user_email, textarea {
+      float: left;
+      width: 100%;
+      max-width: 100%;
+      border: none;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      background: darken(#f9f9f9, 10%);
+      color: darken(#f9f9f9, 50%);
+    }
+    .btn {
+      display       : inline-block;
+      border-radius : 5%;
+      font-size     : 15px;
+      text-align    : center;
+      cursor        : pointer;
+      padding       : 5px 5px;
+      background    : #03A9F4;
+      color         : #ffffff;
+      border        : 2px solid #03A9F4;
+      width: 100px;
+      margin: 15px;
+    }
+  }
+}
+
+// users/unsubscribe------------------------------------------------------------
 .unsubscribe-form {
   text-align: center;
   h1 {
@@ -114,32 +118,33 @@
   }
   .btn {
     display       : inline-block;
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #03A9F4;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #03A9F4;
+    color         : #ffffff;
+    border        : 2px solid #03A9F4;
     width: 200px;
     margin: 30px;
   }
   .btn-danger {
     display       : inline-block;
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #ff7f7f;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #ff7f7f;    /* 枠の指定 */
+    border-radius : 5%;
+    font-size     : 15px;
+    text-align    : center;
+    cursor        : pointer;
+    padding       : 5px 5px;
+    background    : #ff7f7f;
+    color         : #ffffff;
+    border        : 2px solid #ff7f7f;
     width: 200px;
     margin-bottom: 30px;
   }
 }
 
+// users/thanks------------------------------------------------------------
 .thanks-message {
   margin: 50px;
   text-align: center;
