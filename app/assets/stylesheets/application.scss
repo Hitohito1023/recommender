@@ -19,29 +19,29 @@
   padding: 0;
 }
 
+// body--------------------------------------------------------------
 html,　body {
   height: 100%;
   font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック';
   color: black;
 }
 
-// a {
-//   color: #FFFFFF;
-// }
-
-
 #contents {
   height: 100%;
 }
+
+a {
+  text-decoration: none;
+}
+
+// header------------------------------------------------------------
 header {
   display: flex;
   width: 100%;
   height: 70px;
   background-color: #222127;
   align-items: center;
-  // position: fixed;
   top: 0;
-  // padding: 0 10px 0 50px;
 }
 
 .header-title {
@@ -55,7 +55,6 @@ header {
     }
   }
 }
-
 
 .header-item {
   list-style: none;
@@ -75,10 +74,20 @@ header {
   margin: 0 0 0 auto;
 }
 
-a {
-  text-decoration: none;
+.dropdown-menu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  background-color: gray;
+  width: 140px;
+  border: 6px double black;
+  z-index: 10;
+  li {
+    margin: 5px;
+  }
 }
 
+// main----------------------------------------------------------
 main {
   padding: 10px 100px 0 100px;
   // background-color: #99cc00;
@@ -87,22 +96,7 @@ main {
   }
 }
 
-footer {
-  width: 100%;
-  text-align: center;
-  padding: 30px 0;
-  background-color: #222127;
-  height: 100%;
-  // position: absolute;
-  // bottom: 0;
-}
-
-// form {
-//   width: 50%;
-//   margin: 10% auto;
-//   min-width: 9rem;
-// }
-
+// devise---------------------------------------------------------
 .new-user {
   border: none;
 }
@@ -110,7 +104,6 @@ footer {
 .login-user {
   border: none;
 }
-
 
 .login-form {
   width: 400px;
@@ -135,14 +128,14 @@ footer {
   }
   .btn {
     display       : inline-block;
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #03A9F4;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    border-radius : 5%;          
+    font-size     : 15px;        
+    text-align    : center;      
+    cursor        : pointer;     
+    padding       : 5px 5px;  
+    background    : #03A9F4;     
+    color         : #ffffff;    
+    border        : 2px solid #03A9F4;  
     width: 150px;
     margin: 20px 130px;
   }
@@ -172,17 +165,16 @@ footer {
   }
   .btn {
     display       : inline-block;
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #03A9F4;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #03A9F4;    /* 枠の指定 */
+    border-radius : 5%;         
+    font-size     : 15px;        
+    text-align    : center;      
+    cursor        : pointer;     
+    padding       : 5px 5px;   
+    background    : #03A9F4;    
+    color         : #ffffff;    
+    border        : 2px solid #03A9F4;  
     width: 200px;
     margin: 10px 100px;
-
   }
   img {
     border-radius: 50%;
@@ -190,14 +182,52 @@ footer {
   }
 }
 
-// .top-img {
-//   width: 100%;
-//   img {
-//     width: 100%;
-//     height: 500px
-//   }
-// }
+.password_reset {
+  border: none;
+}
 
+.reset-form {
+  width: 400px;
+  margin: 0 auto;
+  height: 560px;
+  #user_email {
+    width: 370px;
+    border: none;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background: darken(#f9f9f9, 10%);
+    color: darken(#f9f9f9, 50%);
+  }
+  .btn {
+    display       : inline-block;
+    border-radius : 5%;          
+    font-size     : 15px;        
+    text-align    : center;      
+    cursor        : pointer;    
+    padding       : 5px 5px;   
+    background    : #03A9F4;     
+    color         : #ffffff;     
+    border        : 2px solid #03A9F4;    
+    width: 200px;
+    margin: 20px 110px;
+  }
+}
+
+// footer--------------------------------------------------------------
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background-color: #222127;
+  height: 100%;
+}
+
+.copy-right {
+  color: #FFFFFF;
+}
+
+// flash_message---------------------------------------------------------
 .alert {
 	text-align: center;
 }
@@ -227,20 +257,7 @@ footer {
     }
   }
 
-.dropdown-menu {
-  list-style: none;
-  display: none;
-  position: absolute;
-  background-color: gray;
-  width: 140px;
-  border: 6px double black;
-  z-index: 10;
-  li {
-    margin: 5px;
-  }
-}
-
-
+// pagination-----------------------------------------------------------
 .paginate {
   margin: 30px auto;
   .pagination{
@@ -268,41 +285,5 @@ footer {
       -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }
-  }
-}
-.copy-right {
-  color: #FFFFFF;
-}
-
-.password_reset {
-  border: none;
-}
-
-
-.reset-form {
-  width: 400px;
-  margin: 0 auto;
-  height: 560px;
-  #user_email {
-    width: 370px;
-    border: none;
-    margin: 0.5rem 0;
-    padding: 0.5rem 1rem;
-    border-radius: 0.3rem;
-    background: darken(#f9f9f9, 10%);
-    color: darken(#f9f9f9, 50%);
-  }
-  .btn {
-    display       : inline-block;
-    border-radius : 5%;          /* 角丸       */
-    font-size     : 15px;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 5px 5px;   /* 余白       */
-    background    : #03A9F4;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    border        : 2px solid #03A9F4;    /* 枠の指定 */
-    width: 200px;
-    margin: 20px 110px;
   }
 }

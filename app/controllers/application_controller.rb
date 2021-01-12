@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
+  #新規登録にname,profile_image,introductionの追加
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :profile_image, :introduction])
   end
