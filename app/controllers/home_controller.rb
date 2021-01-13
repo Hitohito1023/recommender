@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
 
   def top
+    #本番環境でrandの表記を変更（mysqlだとrand,sqliteだとRANDOM)
     rand = Rails.env.production? ?  "rand()" : "RANDOM()"
     @post_items = PostItem.order(rand).limit(10) #post_itemをランダムで取得
     @new_post_items = PostItem.order("id DESC").limit(10) #post_itemを新しい順に取得
