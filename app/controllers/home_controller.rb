@@ -4,9 +4,10 @@ class HomeController < ApplicationController
   end
 
   def top
-    @post_items = PostItem.order("rand()").limit(10) #post_itemをランダムで取得
+    rand = Rails.env.production? ?  "rand()" : "RANDOM()"
+    @post_items = PostItem.order(rand).limit(10) #post_itemをランダムで取得
     @new_post_items = PostItem.order("id DESC").limit(10) #post_itemを新しい順に取得
-    @users = User.order("rand()").limit(10) #userをランダムで取得
+    @users = User.order(rand).limit(10) #userをランダムで取得
   end
 
   def ranking
