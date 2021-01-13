@@ -18,7 +18,6 @@
 
 商品などを勧めたい人、文章能力が高い（高めたい）人
 利用したい商品などを探している人
-自社商品を広めて欲しい企業
 
 ### 主な利用シーン
 
@@ -33,7 +32,7 @@ https://docs.google.com/spreadsheets/d/1sZzLGhnEiemAdreQm3jvoI2HdzLPse9RwPZpQTdk
 ## 開発環境
 
 - OS：Linux(CentOS)
-- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- 言語：HTML,CSS,JavaScript,Ruby,MySQL
 - フレームワーク：Ruby on Rails
 - JS ライブラリ：jQuery
 - IDE：Cloud9
