@@ -101,12 +101,12 @@ $(document).on("turbolinks:load", function(){
 });
 
 //文字数カウント
-// $(document).on("turbolinks:load", function(){
-//   $(".js-text").on("keyup", function() {
-//     let countNum = String($(this).val().length);
-//     $(".counter").text(countNum + "文字");
-//   });
-// });
+$(document).on("turbolinks:load", function(){
+  $(".js-text").on("keyup", function() {
+    let cnt = $(this).val().length;
+    $(".counter").text(cnt + "文字");
+  });
+});
 
 // headerのドロップダウンメニュー
 $(document).on("turbolinks:load",function(){
