@@ -103,7 +103,7 @@ $(document).on("turbolinks:load", function(){
 //文字数カウント
 $(document).on("turbolinks:load", function(){
   $(".js-text").on("keyup", function() {
-    let cnt = $(this).val().length;
+    var cnt = $(this).val().length;
     $(".counter").text(cnt + "文字");
   });
 });
