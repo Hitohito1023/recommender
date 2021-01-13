@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @favorites_count = 0
-    @user.post_items.each do |post_item|　　#pointの総取得数
+    @user.post_items.each do |post_item|
       @favorites_count += post_item.favorites.count
     end
   end
