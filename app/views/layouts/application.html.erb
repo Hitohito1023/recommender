@@ -16,10 +16,14 @@
 
   <body>
     <div id="contents">
-      <%= render 'layouts/header' %>
+      <% unless current_page?(root_path) %>
+        <%= render 'layouts/header' %>
+      <% end %>
 
       <main>
-        <%= render 'search/search_form' %>
+        <% unless current_page?(root_path) %>
+          <%= render 'search/search_form' %>
+        <% end %>
         <%= render 'layouts/notice' %>
         <%= yield %>
       </main>
