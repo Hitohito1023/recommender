@@ -30,5 +30,5 @@ Rails.application.routes.draw do
     resources :post_comments, only: [:create, :destroy]
   end
 
-  resources :genres, only: [:index, :new, :edit, :create, :update, :destroy]
+  resources :genres, only: [:create, :update, :destroy]
 end

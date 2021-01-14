@@ -36,6 +36,9 @@
 
 [詳細はこちら](https://docs.google.com/spreadsheets/d/1sZzLGhnEiemAdreQm3jvoI2HdzLPse9RwPZpQTdk3yE/edit#gid=0)
 
+### テーブル定義書
+[こちら](https://docs.google.com/spreadsheets/d/1aZxnny2IL_IB0DQs1TfwVMEqY70_l2KUCsCCM9jRcEQ/edit?usp=sharing)
+
 ### 活用Gem
 - devise(ログイン)
 - kaminari(ページネーション)

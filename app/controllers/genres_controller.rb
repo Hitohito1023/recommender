@@ -1,14 +1,6 @@
 class GenresController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-    @genres = Genre.all
-  end
-
-  def edit
-    @genre = Genre.find(params[:id])
-  end
-
   def create
     @genre = Genre.new(genre_params)
     if @genre.save
