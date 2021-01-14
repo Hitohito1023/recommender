@@ -1,9 +1,10 @@
 # Recommenders
 <img width="1440" alt="スクリーンショット 2021-01-14 15 49 39" src="https://user-images.githubusercontent.com/71477635/104554873-39c5d080-5680-11eb-9f52-e48f85220763.png">
+
 ## サイト概要
 
 他人に商品やサービス（映画、本、ゲームの予定）を文章で勧め、購買意欲を掻き立てる投稿サイトです。
-実際のサイトは[こちら](http://recommenders.work/)
+　　　　実際のサイトは[こちら](http://recommenders.work/)
 
 ### サイトテーマ
 
