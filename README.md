@@ -1,10 +1,9 @@
 # Recommenders
-
-![logo](https://user-images.githubusercontent.com/71477635/104086907-0c071300-529f-11eb-8e0f-20954a08187a.jpeg)
-
+<img width="1440" alt="スクリーンショット 2021-01-14 15 49 39" src="https://user-images.githubusercontent.com/71477635/104554873-39c5d080-5680-11eb-9f52-e48f85220763.png">
 ## サイト概要
 
 他人に商品やサービス（映画、本、ゲームの予定）を文章で勧め、購買意欲を掻き立てる投稿サイトです。
+実際のサイトは[こちら](http://recommenders.work/)
 
 ### サイトテーマ
 
@@ -26,8 +25,25 @@
 ## 設計書
 
 ### 機能一覧
+- ログイン機能
+- 投稿機能
+- Pointを送る機能（非同期通信）
+- 検索機能
+- ランキング機能
+- フォロー機能(非同期通信)
+- コメント機能（非同期通信）
+- 管理者機能
 
-https://docs.google.com/spreadsheets/d/1sZzLGhnEiemAdreQm3jvoI2HdzLPse9RwPZpQTdk3yE/edit#gid=0
+[詳細はこちら](https://docs.google.com/spreadsheets/d/1sZzLGhnEiemAdreQm3jvoI2HdzLPse9RwPZpQTdk3yE/edit#gid=0)
+
+### 活用Gem
+- devise(ログイン)
+- kaminari(ページネーション)
+- Refile(画像投稿)
+- Rubocop(リーダブルコード)
+- rails_admin(管理者画面)
+- RSpec
+
 
 ## 開発環境
 
