@@ -10,9 +10,10 @@ class HomeController < ApplicationController
   end
 
   def ranking
-    @post_items = PostItem.includes(:favorited_users).sort { |a, b| b.favorited_users.size <=> a.favorited_users.size }
-    @users = User.includes(:post_items).sort { |a, b| b.post_items.size <=> a.post_items.size }
+    @post_items = PostItem.find(Favorite.group(:post_item_id).order('count(post_item_id) desc').limit(7).pluck(:post_item_id))
+    # @post_items = PostItem.includes(:favorited_users).sort { |a, b| b.favorited_users.size <=> a.favorited_users.size }
+    @users = User.find(PostItem.group(:user_id).order('count(user_id) desc').limit(7).pluck(:user_id))
+    # @users = User.includes(:post_items).sort { |a, b| b.post_items.size <=> a.post_items.size }
     @user_followers = User.includes(:followers).sort { |a, b| b.followers.size <=> a.followers.size }
   end
-
 end

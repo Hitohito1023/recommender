@@ -41,7 +41,7 @@
     </div>
 
     <div id="tab3" class="tab">
-	    <% @user_followers.each.with_index(1) do |user_follower, i | %>
+	    <% @user_followers.first(7).each.with_index(1) do |user_follower, i | %>
         <div class="tab-user-content">
           <p></p><h4>第<%= i %>位</h4>
 			    <%= link_to user_path(user_follower) do %>
