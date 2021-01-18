@@ -51,7 +51,7 @@
 
 ## 開発環境
 
-- OS：Linux(CentOS)
+- OS：Amazon Linux
 - 言語：HTML,CSS,JavaScript,Ruby,MySQL
 - フレームワーク：Ruby on Rails
 - JS ライブラリ：jQuery
