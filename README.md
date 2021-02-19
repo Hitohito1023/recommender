@@ -34,6 +34,7 @@
 - フォロー機能
 - コメント機能（非同期通信）
 - 管理者機能
+- レスポンシブ対応済み（width480px以下）
 
 [詳細はこちら](https://docs.google.com/spreadsheets/d/1sZzLGhnEiemAdreQm3jvoI2HdzLPse9RwPZpQTdk3yE/edit#gid=0)
 
