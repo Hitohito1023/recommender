@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%# ↓レスポンシブ対応のため一文追加  %>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
     <title>Recommenders</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -31,6 +34,13 @@
       <footer>
         <p class="copy-right">© All rights reserved by ryota.</p>
       </footer>
+
+      <%# トップへ戻るボタン %>
+      <span id="page_top">
+        <a href="#">
+        </a>
+      </span>
+
     </div>
   </body>
 </html>
