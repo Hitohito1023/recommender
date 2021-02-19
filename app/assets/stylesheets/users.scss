@@ -161,3 +161,57 @@
     margin: 0 auto;
   }
 }
+
+// レスポンシブ対応-----------------------------------------------
+
+@media screen and (max-width:480px) {
+
+  // users/index----------------------------------
+  .users-index {
+    display: block;
+    .users-index-content {
+      text-align: center;
+    }
+  }
+
+  // users/show----------------------------------
+  .user-show {
+    display: block;
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+    margin: 40px 0;
+    .user-show-content {
+      margin-left: 0px;
+      width: 100%;
+    }
+  }
+
+  .user-post {
+      text-align: center;
+  }
+
+  // users/edit----------------------------------
+  .user-edit {
+    display: block;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+    margin-top: 20px;
+    .user-edit-form {
+      margin-left: 0px;
+      margin-top: 20px;
+      text-align: center;
+      #user_name, #user_email, textarea {
+        display: flex;
+        float: none;
+        width: 80%;
+        margin: 10px auto;
+      }
+      div {
+        text-align: center;
+      }
+    }
+  }
+
+}
